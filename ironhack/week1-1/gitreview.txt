@@ -1,0 +1,9 @@
+ Set up remote repository
+ 1. Have a Github account (or BitBucket)  
+ 2. Git remote add origin <url> #origin is name of remote, origin by convention
+3. git remote to view remotes in repo
+4. git push <remote name> <branch name> (git push origin master by default)
+5. To enable git push shortcut run git push -u origin master
+6. To get info on branches in github repo:
+	git branch -vr
+7. git pull same but for getting info not giving it

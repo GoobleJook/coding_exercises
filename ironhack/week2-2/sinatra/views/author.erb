@@ -1,0 +1,25 @@
+<html>
+<head></head>
+<body>
+	<h1 style='text-align: center'>Robert Hernandez</h1>
+	<h2 style='text-align: center'>Some Guy</h2>
+	<p style='text-align: center'>You know Robert. He's a guy. He likes things about stuff. And sometimes he doesn't.</p>
+	
+
+<!-- html comment -->
+<%# ERB COMMENT %>
+
+<% if Date.today.tuesday? %>
+	<p>
+		Enjoy your Tuesday, bud!
+		<strong>You must be FUCKING HUNGRY</strong>
+	</p>
+<% end %>
+
+<p>
+	Robert was born on <%= Time.new(1973,10,30)%>
+	Or, <%= @years_ago %> years ago.
+</p>
+</body>
+
+</html>

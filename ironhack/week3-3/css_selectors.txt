@@ -1,0 +1,53 @@
+css selectors
+
+/* elements */
+p {}
+
+/* classes */
+.class {}
+.class.class {}
+
+/* id */
+#id {}
+
+/* attribute */
+.class[title="title"] {}
+[href="/signup"] {}
+
+Tips:
+- Try to avoid targeting HTML tags directly (too broad)
+- An element can have multiple .classes, and classes may be repateated across the page
+- .classes can't start with numbers
+- #ids can only appear once in a page, and you should avoid in styling with CSS. Stick to the .classes, if possible.
+
+/* pseduo selector */
+a:hover
+input:focus
+
+/* CSS generated content */
+.class::before
+.class::after
+
+Selector combinations
+.class a // Targets all <a> elements inside
+.class > a // child
+.class + a // sibling
+.class ~ a /* all <a> elements that come after a .class element inside the same parent 
+
+CSS box (inside out):
+1. Content
+2. Padding
+3. Border
+4. Margin
+
+Other sizes:
+em
+ex
+ch
+rem
+px
+vw
+vh
+vmin
+vmax
+%

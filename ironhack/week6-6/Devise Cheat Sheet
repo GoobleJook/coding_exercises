@@ -1,0 +1,52 @@
+Devise Cheat Sheet
+
+Adding Devise to an existing project
+1) Add devise to Gemfile
+gem 'devise'
+
+2) Run bundle install
+$ bundle install
+
+3) Restart your Rails server
+Stop your server with Control + C
+$ rails server
+
+3) Run the first generate command
+$ rails generate devise:install
+
+4) Generate the Devise model
+$ rails generate devise User
+
+5) Before you migrate, edit the latest migration to add new fields.   
+Migrations are located in the db/migrate/ folder
+Migration files are ordered by date so the last one is the latest
+create_table(:users) do |t|
+    t.string :name
+    t.string :phone
+    t.text :bio
+    # ...
+
+6) Apply the new migration
+$ rake db:migrate
+
+
+Using Devise in your controllers and views
+
+1) To force people to log in to see certain pages, add authenticate_user! to the beginning of the actions.
+Actions are methods on your controller that render pages.
+def new
+    authenticate_user!
+    # ...
+end
+
+To save yourself a lot of typing, you can use before_action on the controller to specify all the actions you want to apply authenticate_user! to.
+class PostsController < ApplicationController
+    before_action :authenticate_user!, [ "new", "create" ]
+    # ...
+ If you don't provide a list of actions, it applies authentication to every action
+NEEDS clarification
+
+OPTIONAL
+
+remove registerable to avoid people adding accounts
+

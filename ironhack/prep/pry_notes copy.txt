@@ -1,0 +1,11 @@
+# all these commands are executed within the pry shell
+
+# ls <object> displays which methods are available to the object type
+
+# pry supports tab comlpetion
+
+# use show-doc to get details on a method, ie. show-doc "string".upcase
+
+# a '.' in front of the method allows CLI-type commands to run in pry, like .ls
+
+# for debugging use "require 'pry'" at start of file, and "binding.pry" to insert step for debugging inside the program; see math.rb for more details

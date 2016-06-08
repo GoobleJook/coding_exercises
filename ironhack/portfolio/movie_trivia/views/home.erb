@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Home | Movie Trivia Game</title>
+	</head>
+
+	<body>
+		<h1>Robert's Movie Game</h1>
+
+		<h2>Welcome to Robert's Movie Game</h2>
+		<h2>Are you ready to have some <em>fun</em></h2>
+
+		<p>Here's the deal: You enter a search term below, and I will find some movies with that in their title (or other criteria to change later) and ask you some questions about movies with that in their title (or something more interesting). </p>
+
+
+		<form action="/search" method="POST">
+			<input type="text" name="search_term" placeholder="Word in Title">
+
+			<button type="submit" name="btn" value="search">Search</button>
+		</form>
+	</body>
+</html>

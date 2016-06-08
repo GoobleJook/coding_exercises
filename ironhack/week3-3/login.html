@@ -1,0 +1,32 @@
+<!-- 
+		1. Email or username field
+		2. Password field
+		3. Checkbox to remember creds
+		4. Button to login	
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Login Page</title>
+	</head>
+	<body>
+		<h1>Log in to our fabulous app!</h1>
+		<form action="/login" method="POST">
+			
+			<label for="username">Username:</label>
+			<input type="text" name="username" id="username"><br>
+			
+			<label for="password">Password:</label>
+			<input type="password" name="password" id="password"><br><br>
+			
+			<label for="checkbox">Remember my Password?</label>
+			<input type="checkbox" name="remember" id="checkbox" value="Yes"><br><br>
+
+			<button type="button" name="btn" id="btn" value="submit">Submit</button>
+		
+		</form>
+	</body>
+</html>

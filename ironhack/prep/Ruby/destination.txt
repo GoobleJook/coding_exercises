@@ -1,0 +1,5 @@
+"Hello from source file 1!"
+
+"What do you think happens if we get combined, source file 1?""Hello from source file 2!"
+
+"I bet I will reply with a hello and then you will see this answer."

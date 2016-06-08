@@ -1,0 +1,3 @@
+"Hello from source file 1!"
+
+"What do you think happens if we get combined, source file 1?"
