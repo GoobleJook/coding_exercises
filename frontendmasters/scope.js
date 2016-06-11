@@ -104,4 +104,33 @@ with (obj) {
 obj.d;  // unverified
 d; // 3 --- OOPS!
 
-day 4
+// Day 4: IFFE (Immediately Invoked Function Expression), a function, either named or anonymous that immediately invokes itself 
+// A common way to figure out scope in a strewn-out JS file is to wrap the whole thing in an IFFE and only let out into global what you want/need to
+// Reommended to always name your IFFEs, although we don't do so below
+// Example of IFFE, one of the top two patterns in JavaScript
+
+
+var foo = "foo";
+
+(function(){
+	var foo = "foo2";
+	console.log(foo); // "foo2"
+})(); // wrapped in parenthesis to make an expression
+// if you create an expression with var, you pollute your code with a name, which defeats the purpose
+// The () at the end of the expression immediately executes it.
+console.log(foo); // "foo"
+
+// variations: IFEE is just a function call, which means we can pass things into it, as...
+var foo = "foo";
+
+(function(bar){
+
+	var foo = bar;
+	console.log(foo); // "foo"
+
+})(foo);
+
+console.log(foo); // "foo"
+
+// example IRL: Pass in the window object but call it global, which is a stylistic way to make sure you know what is global
+// because you're calling global.
