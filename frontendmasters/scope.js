@@ -70,7 +70,7 @@ function foo () {
 }
 foo();
 
-// Day 3, lessone 3: Cheating lexical scope: eval
+// Day 3, lesson 3: Cheating lexical scope: eval
 
 var bar = "bar";
 
@@ -81,4 +81,27 @@ function foo(str) {
 
 foo("var bar = 42;");
 
-// cheating makes your JS run slow
+// cheating makes your JS run slow, don't use eval, don't use setTimeout() with string syntax;
+// can be used with function reference
+// with is another way to cheat, again don't cheat
+
+var obj = {
+	a: 2,
+	b: 3,
+	c: 4
+};
+
+obj.a = obj.b + obj.c;
+obj.c = obj.b - obj.a;
+
+with (obj) {
+	a = b + c; // meant to be a property from obj
+	c = b - a;
+	d = 3 // ? Doesn't create a d instance in obj, but it has created something in global
+	// with is treated as a lexical scope, this invalidates many of JavaScript's optimizations, and it SLOWS it down
+} 
+
+obj.d;  // unverified
+d; // 3 --- OOPS!
+
+day 4
