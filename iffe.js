@@ -1,0 +1,1 @@
+// Day 4: IFFE (Immediately Invoked Function Expression) 
