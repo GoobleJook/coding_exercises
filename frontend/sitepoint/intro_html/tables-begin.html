@@ -13,15 +13,55 @@
 </head>
 <body>
 
-Shopping cart
+<table>
+	<caption>Shopping cart</caption>
+	<thead>
+		<tr>
+			<th scope="col">Product</th>
+			<th scope="col">Price</th>
+			<th scope="col">Quantity</th>
+			<th scope="col">Subtotal</th>
+		</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td>Product 1</td>
+		<td>$10.00</td>
+		<td>2</td>
+		<td>$20.00</td>
+	</tr>
+	<tr>
+		<td>product 2</td>
+		<td>$5.00</td>
+		<td>1</td>
+		<td>$5.00</td>
+	</tr>
+	<tr>
+		<td colspan="3">
+			Shipping and Handling
+		</td>
+		<td>$5.00</td>
+	</tr>
+	<tr>
+		<td rowspan="2" colspan="3">
+			Discount
+		</td>
+		<td>
+			10%
+		</td>
+	</tr>
+	<tr>	
+		<td>- $3.00</td>
+	</tr>
+	<tr>
+		<td colspan="3">
+			Grand total
+		</td>
+		<td>$27.00</td>
+	</tr>
 
-Product		Price		Quantity		Subtotal
-Product 1	$10.00      2               $20.00
-Product 2   $5.00       1 				$5.00
-Shipping and Handling					$5.00
-Discount								10%
-										- $3.00
-Grand total								$27.00
+	</tbody>
+</table>
 
 </body>
 </html>
