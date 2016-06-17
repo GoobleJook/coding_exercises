@@ -1,3 +1,0 @@
-"Hello from source file 2!"
-
-"I bet I will reply with a hello and then you will see this answer."
