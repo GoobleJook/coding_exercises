@@ -1,0 +1,10 @@
+<table>
+	<% @accounts.each do |account| %>
+	<% if account.type == "Customer" %>
+	<tr>
+		<td><%= link_to account.name, account_path(account) %></td>
+		<td><%= account.type.to_s %></td>
+	</tr>
+	<% end %>
+	<% end %>
+</table>
