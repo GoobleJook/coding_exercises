@@ -1,0 +1,37 @@
+body
+{
+	margin: 0;
+	padding: 20px;
+	font-size: 100%;
+}
+
+h1 { margin: 0 0 .5em; }
+h2 { margin: 0; }
+
+.test
+{
+	display: inline-block;
+	background: yellow;
+}
+
+.test06,
+.test07,
+.test08,
+.test09
+{
+	width: 140px;
+	height: 30px;
+}
+
+/* add rules here */
+
+/*
+inline-block elements appear within lines of text, similar to inline elements.
+width of inline-block elements will collapse by default and can be sized and stretched
+height of inline-block elements will collapse by default and can be sized
+margin can be applied to all sides of inline-block elements and affects elements to each side
+padding can be applied to all sides of inline-block elements and affects elements to each side
+border can be applied to all sides of inline-block elements and affects elements to each side
+overflow can be applied to inline-block elements
+can set any element to { dislpay: inline-block; }
+*/
