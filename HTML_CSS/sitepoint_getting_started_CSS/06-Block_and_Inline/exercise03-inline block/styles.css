@@ -35,3 +35,13 @@ border can be applied to all sides of inline-block elements and affects elements
 overflow can be applied to inline-block elements
 can set any element to { dislpay: inline-block; }
 */
+
+.test01 { width: 200px; }
+.test02 {height: 60px;}
+.test03 { margin: 2em; }
+.test04 { padding: 2em; }
+.test05 { border: 1em solid red; }
+.test06 { overflow: visible; }
+.test07 { overflow: hidden; }
+.test08 { overflow: scroll; }
+.test09 { overflow: auto; }
