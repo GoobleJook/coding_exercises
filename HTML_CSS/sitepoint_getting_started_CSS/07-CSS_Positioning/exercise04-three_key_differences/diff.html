@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="styles.css">
+	<title>Three key differences</title>
+</head>
+<body>
+	<h1>Three key differences between absolute, relative, and fixed positioning</h1>
+	
+	<div>
+		<h2 id="first_heading">What happens to the content after the element?</h2>
+		<p><strong>Absolute: </strong>Content after the element will ignore the positioned element</p>
+		<p><strong>Relative: </strong>Content after the element will leave space for the positioned element</p>
+		<p><strong>Fixed: </strong>Content after the element will ignore the positioned element</p>
+	</div>
+
+	<div>
+		<h2>Do they have a width, or do they shrink-wrap?</h2>
+		<p><strong>Absolute: </strong>Initially shrink-wrapped but can be sized or stretched</p>
+		<p><strong>Relative: </strong></p>
+			<ul>
+				<li>If they are block level, they will initially be stretched but they can be given size.</li>
+				<li>If they are inline, they will initially be shrink-wrapped and cannot be given size.</li>
+			</ul>
+		<p><strong>Fixed: </strong>Initially shrink-wrapped but can be sized or stretched.</p>
+	</div>	
+
+	<div>
+		<h2>What are they positioned against?</h2>
+		<p><strong>Absolute: </strong>Positioned relative to a parent with positioning or viewport if no positioned parent is present.</p>
+		<p><strong>Relative: </strong>Positioned relative to element's original position.</p>
+		<p><strong>Fixed: </strong>Positioned relative to the viewport.</p>
+	</div>
+
+</body>
+</html>

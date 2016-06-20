@@ -37,6 +37,18 @@ h1 { margin: 0 0 .5em; }
 }
 
 /* add rules here */
+h1 { 
+	position: fixed;
+	top: 5px;
+	margin-bottom: 40px;
+	font-family: arial, garamond, sans-serif;
+	color: red;
+}
 
+#first_heading {
+	margin-top: 40px;
+}
 
-
+.test01 { z-index: 10; }
+.test02 { z-index: -5; }
+.test03 { z-index: 20; }

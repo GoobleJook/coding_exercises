@@ -21,8 +21,25 @@ h2,strong
 	border: 1px solid blue;
 }
 
+/*Relatively positioned elements are positioned relative to its original position in normal flow
+*/
+
 /* add the property */
+
+h2, strong { 
+	position: relative;
+ }
 
 /* understanding values */
 
+h2, strong {
+	left: 20px;
+	top: 20px;
+	left: -20px;
+	top: -20px;
+}
+
 /* sized */
+h2, strong {
+	width: 300px; /*strong (inline) doesn't change, but h2 (block) does. */
+}
