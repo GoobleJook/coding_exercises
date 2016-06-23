@@ -16,3 +16,11 @@ h1 { margin: 0 0 .5em; }
 }
 
 /* add rules here */
+.example01 {
+	float: left;
+	margin-right: 20px;
+}
+
+.example02 { float: right; }
+
+p { border: 1px solid red; }
