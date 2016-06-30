@@ -15,7 +15,7 @@
   <div class="text">Replace me (with cute puppies)!</div>
   <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script>
-  $('.btn').click(function() {
+    $('.btn').click(function() {
     
   $('.text').text('loading . . .');
   $.ajax({
@@ -30,7 +30,7 @@
       var children = response.data.children;
       for (var i = 0; i < children.length; i++) {
        if (children[i].data.thumbnail !== "self" && children[i].data.thumbnail !== "default") {
-        $('text').append('<img src="' + children[i].data.thumbnail + '" />')
+        $('.text').append('<img src="' + children[i].data.thumbnail + '" />')
         }  
       }
     },   
