@@ -1,4 +1,8 @@
-var map;
+var map; // Global map variable
+
+// get the location to display the coordinates
+var lat = document.getElementById('latcoords');
+var lng = document.getElementById('loncoords');
 
 var mapStyle = [
 	{
@@ -40,7 +44,6 @@ var mapStyle = [
 
 //function run on DOM load
 function loadMap() {
-	var mapId = document.getElementById('map');
 	var mapOptions = {
 		center: new google.maps.LatLng(25.761680, -80.19179),
 		zoom: 12,
@@ -70,7 +73,24 @@ function loadMap() {
 
 		styles: unsaturatedBrowns
 	};
-	map = new google.maps.Map(mapId, mapOptions);
+	var mapId = document.getElementById('map'); 
+	map = new google.maps.Map(mapId, mapOptions); // Create the map
+
+	updateCurrentLatLng(map.getCenter());
+	mapEventListeners();
 }
 
-google.maps.event.addDomListener(window, 'load', loadMap());
+function mapEventListeners() {
+	var mouseMoveChanged = google.maps.event.addListener(map, 'mousemove', function(event) {
+		updateCurrentLatLng(event.latLng);
+	})
+}  // Mouse move updates the coordinates
+
+// Update the position of the mouse in the latitude and longitude
+
+function updateCurrentLatLng(latLng) {
+	lat.innerHTML = latLng.lat();
+	lng.innerHTML = latLng.lng();
+}
+
+google.maps.event.addDomListener(window, 'load', loadMap()); // Load the map
