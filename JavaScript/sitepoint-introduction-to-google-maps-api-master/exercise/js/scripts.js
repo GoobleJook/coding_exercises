@@ -52,11 +52,11 @@ function mapEventListeners() {
 		}
 	);
 
-	var listenerIdle = google.maps.event.addListenerOnce(map, 'idle', 
-		function() {
-			alert('Map is ready!');	
-		}
-	);
+	// var listenerIdle = google.maps.event.addListenerOnce(map, 'idle', 
+	// 	function() {
+	// 		alert('Map is ready!');	
+	// 	}
+	// );
 		
 
 }  // Mouse move updates the coordinates
