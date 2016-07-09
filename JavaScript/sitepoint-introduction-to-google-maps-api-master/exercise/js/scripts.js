@@ -1,10 +1,49 @@
 var map;
 
+var mapStyle = [
+	{
+		'stylers':[
+			{'saturation':-100},
+			{'gamma':1}
+		]
+	},
+	{
+		'elementType': 'labels.text.stroke',
+		'stylers':[
+			{'visibility':'on'}
+		]
+	},
+	{
+		'featureType':'road',
+		'elementType':'geometry',
+		'stylers':[
+			{'visibility':'simplified'}
+		]
+	},
+	{
+		'featureType':'water',
+		'stylers':[
+			{'visibility':'on'},
+			{'saturation':50},
+			{'gamma':0},
+			{'hue':'#50a5d1'}
+		]
+	},
+	{
+		'featureType':'landscape',
+		'elementType':'all',
+		'stylers':[
+			{'color':'#e2e2e2'}
+		]
+	}
+];
+
+//function run on DOM load
 function loadMap() {
 	var mapId = document.getElementById('map');
 	var mapOptions = {
 		center: new google.maps.LatLng(25.761680, -80.19179),
-		zoom: 18,
+		zoom: 12,
 		minZoom: 2,
 		maxZoom: 18,
 		
@@ -17,8 +56,8 @@ function loadMap() {
 									 google.maps.MapTypeId.TERRAIN],
 			position: google.maps.ControlPosition.TOP_RIGHT
 		},
-		mapTypeId: google.maps.MapTypeId.SATELLITE,
-		tilt: 45,
+		mapTypeId: google.maps.MapTypeId.TERRAIN,
+		// tilt: 45,
 		
 		// zoom controls
 		zoomControl: true,
@@ -29,18 +68,7 @@ function loadMap() {
 		
 		streetViewControl: false,
 
-		// pan controls are deprecated
-		// panControl: true,
-		// panControlOptions: {
-
-		// 	position: google.maps.ControlPosition.BOTTOM_LEFT
-		// },
-
-		// Overview Map Controls are deprecated in 3.22+
-		// overviewMapControl: true,
-		// overviewMapControlOptions: {
-		// 	opened: true
-		// }
+		styles: unsaturatedBrowns
 	};
 	map = new google.maps.Map(mapId, mapOptions);
 }
