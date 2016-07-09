@@ -3,3 +3,8 @@ html, body, #map {
 	margin: 0px;
 	padding: 0px;
 }
+
+#map {
+	width: 640px;
+	height: 480px;
+}
