@@ -42,6 +42,9 @@ function loadMap() {
 	map = new google.maps.Map(mapId, mapOptions); // Create the map
 
 	updateCurrentLatLng(map.getCenter());
+
+	updateUrlLocation(map.getCenter(), map.getZoom());
+
 	mapEventListeners();
 }
 
@@ -68,8 +71,7 @@ function mapEventListeners() {
 		function() {
 			updateUrlLocation(map.getCenter(), map.getZoom());
 		}
-	); // zoom changed for updating URL
-		
+	); // zoom changed for updating URL		
 }  
 
 function updateCurrentLatLng(latLng) {
@@ -80,7 +82,7 @@ function updateCurrentLatLng(latLng) {
 
 function updateUrlLocation(center, zoom) {
 	var url = '?lat='+center.lat()+'&lon='+center.lng()+'&zoom='+zoom;
-	window.history.pushState({center: "center", zoom: "zoom" }, 'map center', url);
+	window.history.pushState({center:center,zoom:zoom}, 'map center', url);
 } // set lat and lon and zoom into url
 
 google.maps.event.addDomListener(window, 'load', loadMap()); // Load the map
