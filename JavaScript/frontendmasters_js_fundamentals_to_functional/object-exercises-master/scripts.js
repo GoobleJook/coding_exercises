@@ -8,12 +8,12 @@ animal.noises = noises;
 
 
 for(var prop in animal) {
-	count += 1;
-	if(prop == "username") {
+	count++;
+	if(prop === "username") {
 		console.log("Hi my name is " + animal[prop]);
-	} else if(prop == "tagline") {
+	} else if(prop === "tagline") {
 		console.log("I like to say " + animal[prop]);
-	} else if(prop == "noises") {
+	} else if(prop === "noises") {
 		console.log(animal[prop][0])
 	}
 }
