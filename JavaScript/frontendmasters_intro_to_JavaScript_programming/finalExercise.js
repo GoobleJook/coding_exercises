@@ -18,11 +18,13 @@ const tax_rate = 0.075;
 const phone_price = 200.00;
 const accessory_price = 75.00;
 const spending_threshold = 1400.00;
-const bank_account_balance = 1200.00;
-
+var bank_account_balance;
 var money_spent = 0;
 var price_with_tax = 0;
-while (money_spent < spending_threshold) {
+
+bank_account_balance = prompt("What is your current bank_account_balance? ");
+
+while (money_spent < bank_account_balance) {
 	money_spent += phone_price + accessory_price
 }
 
