@@ -14,10 +14,10 @@
 // Bonus Challenge: Try to incorporate input into this program, perhaps with the prompt(..) covered in "Input" earlier. 
 // You may prompt the user for their bank account balance, for example. Have fun and be creative!
 
-const tax_rate = 0.075;
-const phone_price = 200.00;
-const accessory_price = 75.00;
-const spending_threshold = 1400.00;
+const TAX_RATE = 0.075;
+const PHONE_PRICE = 200.00;
+const ACCESSORY_PRICE = 75.00;
+const SPENDING_THRESHOLD = 1400.00;
 var bank_account_balance;
 var money_spent = 0;
 var price_with_tax = 0;
@@ -25,17 +25,17 @@ var price_with_tax = 0;
 bank_account_balance = prompt("What is your current bank_account_balance? ");
 
 while (money_spent < bank_account_balance) {
-	money_spent += phone_price + accessory_price
+	money_spent += PHONE_PRICE + ACCESSORY_PRICE
 }
 
 function calculate_tax(price) {
-	price_with_tax = price * (1 + tax_rate)
+	price += price * (1 + TAX_RATE)
 }
 
 function give_total(price) {
 	console.log("You spent $" +price.toFixed(2));
 	if (price > bank_account_balance) {
-		console.log("You went over your bank account balance by $" + (price- bank_account_balance).toFixed(2));
+		console.log("You went over your bank account balance by $" + (price - bank_account_balance).toFixed(2));
 	} else {
 	console.log("You stayed within your bank limit by $" +(bank_account_balance-price).toFixed(2));
 	}
