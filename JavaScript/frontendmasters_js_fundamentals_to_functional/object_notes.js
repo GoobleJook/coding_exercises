@@ -28,3 +28,17 @@
 // variables - yes
 // numbers - yes
 // expressions - yes
+
+// Looping objects
+
+var box = {
+	material: 'cardboard',
+	0: 'meow',
+	'^&*': 'testing 123'
+};
+
+console.log(box)
+
+for(var key in box) {
+	console.log("The value of " + key + " is " + box[key]);
+};
