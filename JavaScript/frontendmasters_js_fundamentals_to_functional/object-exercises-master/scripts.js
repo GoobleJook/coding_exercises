@@ -15,5 +15,5 @@ for(var prop in animal) {
 		console.log("I like to say " + animal[prop]);
 	} else if(prop === "noises") {
 		console.log(animal[prop][0])
-	}
-}
+	} 
+} console.log("Animal has " + count + " properties!");
