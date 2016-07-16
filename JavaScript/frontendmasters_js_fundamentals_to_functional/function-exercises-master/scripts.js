@@ -1,12 +1,14 @@
 
 
 var AnimalTestUser = function(username) {
+	var argLength = arguments.length;
 	if (arguments.length > 1) {
 		var otherArgs = [];
-		for (var i = 1; i < arguments.length; i++) {
+		for (var i = 1; i < argLength; i++) {
 			otherArgs.push(arguments[i]);
 		}
-	} return { 'username' : username, 'otherArgs': otherArgs };
+	} 
+	return { 'username' : username, 'otherArgs': otherArgs };
 };  //tests to see if only username is contained, returns username (additional arguments as an array) as object 
 
 
@@ -27,14 +29,14 @@ var addFriend = function (animal, friend) {
 }; // bidirectionally creates friends between animals
 
 var addMatchesArray = function(farm){
-	for(var i = 0; i < farm.length; i++) {
-		farm[i].matches = [];
+	for(var animal in farm) {
+		farm[animal].matches = [];
 	}
 }; // creates blank matches
 
 var giveMatches = function(farm) {
-	for(var i = 0; i < farm.length; i++) {
-		farm[i].matches.push(farm[i].friends[(Math.floor(Math.random() * farm[i].friends.length))]);
+	for(var animal in farm) {
+		farm[animal].matches.push(farm[animal].friends[(Math.floor(Math.random() * farm[animal].friends.length))]);
 	}
 } // randomly assigns matches from friends
 
