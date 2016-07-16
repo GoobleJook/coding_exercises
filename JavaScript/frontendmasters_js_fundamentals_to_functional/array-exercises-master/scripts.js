@@ -23,4 +23,4 @@ animals.push(fish);
 
 console.log(animals);
 console.log(animals.length) //should be 4
-
+console.log(animals[0]["noises"][0]) // should be "bark"
