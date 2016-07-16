@@ -1,4 +1,5 @@
-
+// Teacher had me add for...in syntax, then suggested the for i
+// that I previously had would be better
 
 var AnimalTestUser = function(username) {
 	var argLength = arguments.length;
