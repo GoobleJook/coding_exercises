@@ -6,12 +6,11 @@
 //  call to `blab` comes after 2 seconds. The `blab` function itself should stay the same as before.
 
 var nonsense = function(string) {
-	var blab = function(string){
+	var blab = function() {
 		alert(string);
 	};
-	return blab(string);
+	setTimeout(blab,2000);
 };
 
-stringAlert = nonsense('stringAlert');
-console.log(stringAlert());
-
+var stringAlert = nonsense('stringAlert');
+console.log(stringAlert);
