@@ -9,3 +9,14 @@ function checkscope() {
 	}
 	return innerFunc;
 }
+
+// run parent function and save to a variable. This variable holds whatever the function returns (including its scope).
+
+var test = checkscope();
+
+// optional: Verify that the variable holds the inner function
+
+test;
+
+// call test and run the inner function (would return local scope in this case)
+console.log(test());
