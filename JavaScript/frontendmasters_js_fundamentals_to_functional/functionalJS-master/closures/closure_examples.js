@@ -53,3 +53,36 @@ console.log(myCounter.count()); //2
 console.log(myCounter.count()); //3
 myCounter.reset();
 console.log(myCounter.count()); //1
+
+//example 5
+var sayAlice = function() {
+	var makeLog = function() {
+		console.log(alice);
+	};
+	var alice = 'Why hello there, Alice!';
+	return makeLog;
+};
+
+var hello = sayAlice();
+console.log(hello); // will return function definition
+console.log(hello()); // will say hello to Alice (and undefined because console.log doesn't return anything)
+
+
+//example 6 -- run code in console
+var makeStopwatch = function() {
+	console.log('initialized');
+	var elapsed = 0;
+	console.log(elapsed);
+
+	var stopwatch = function() {
+		console.log('stopwatch');
+		return elapsed;
+	};
+
+	var increase = function(){ elapsed++ };
+	setInterval(increase, 1000);
+
+	return stopwatch;
+};
+
+var x = makeStopwatch();
