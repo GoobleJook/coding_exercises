@@ -10,7 +10,6 @@
 // variable called `blabLater`. Call `nonsense` again with a different string and store the returned 
 // value in a variable called `blabAgainLater`.
 
-
 var nonsense = function(string) {
 	var blab = function() {
 		alert(string);
@@ -22,3 +21,18 @@ var blabLater = nonsense('stringAlert!');
 console.log(blabLater());
 var blabAgainLater = nonsense('Another stringAlert!');
 console.log(blabAgainLater());
+
+// 4. Write a function with a closure. The first function should only take one argument, 
+// someone's first name, and the inner function should take one more argument, 
+// someone's last name. The inner function should console.log both the first name and the last name.
+
+var lastNameTrier = function(firstName) {
+	var innerFunction = function(lastName) {
+		console.log(firstName + ' ' + lastName);
+	};
+	return innerFunction;
+};
+
+var name_creator = lastNameTrier("Officer");
+name_creator("Hernandez");
+name_creator("Jones");
