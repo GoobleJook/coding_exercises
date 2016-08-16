@@ -2,8 +2,26 @@
 // another function, `blab` which alerts `string` and is immediately called inside 
 // the function `nonsense`. `blab` should look like this inside of the `nonsense` function:
 
+var nonsense = function(string) {
+	var blab = function() {
+		alert(string);
+	};
+	blab();
+};
+
+nonsense("immediate hello!");
+
 // 2. In your function, `nonsense`, change the immediate call to a setTimeout so that the
 //  call to `blab` comes after 2 seconds. The `blab` function itself should stay the same as before.
+
+var nonsense = function(string) {
+	var blab = function() {
+		alert(string);
+	};
+	setTimeout(blab, 2000);
+};
+
+nonsense("delayed hihihi!");
 
 // 3. Now, instead of calling `blab` inside of `nonsense`, return `blab` (without invoking it). 
 // Call `nonsense` with some string and store the returned value (the `blab` function) in a 
@@ -14,14 +32,14 @@ var nonsense = function(string) {
 	var blab = function() {
 		alert(string);
 	};
-	return setTimeout(blab, 1000);
+	return blab;
 };
 
-var blabLater = nonsense('stringAlert!');
-blabLater;
-var blabAgainLater = nonsense('Another stringAlert!');
-blabAgainLater;
+var blabLater = nonsense("hihihihi blabLater!")
+var blabAgainLater = nonsense("oh hihihi blabAgainLater!")
 
+blabLater();
+blabAgainLater();
 
 // 4. Write a function with a closure. The first function should only take one argument, 
 // someone's first name, and the inner function should take one more argument, 
@@ -34,9 +52,9 @@ var lastNameTrier = function(firstName) {
 	return innerFunction;
 };
 
-var name_creator = lastNameTrier("Officer");
-name_creator("Hernandez");
-name_creator("Jones");
+var officer_creator = lastNameTrier("Officer");
+officer_creator("Hernandez");
+officer_creator("Jones");
 
 // 4. Create a `storyWriter` function that returns an object with two methods. 
 // One method, `addWords` adds a word to your story and returns the story while 
@@ -45,11 +63,25 @@ name_creator("Jones");
 var storyWriter = function() {
 	var story = "";
 	return {
-		value: function() { return story },
+		value: function() { return story.trim() },
 		addWords: function(words) { story += " " + words },
 		erase: function() { story = "" }
 	};
-};
+}; // my way
+
+// var storyWriter = function() {
+// 	var story = '';
+// 	return {
+// 		addWords: function(str) {
+// 			story += str + ' ';
+// 			return story.trim();
+// 		},
+// 		erase: function() {
+// 			story = '';
+// 		}
+// 	}
+// }
+
 
 var farmLoveStory = storyWriter();
 farmLoveStory.addWords('There was once a lonely cow.'); // 'There was once a lonely cow.'
@@ -66,6 +98,26 @@ console.log("There should be a blank line above this one.")
 // 5. Using the module pattern, design a toaster. Use your creativity here and think about what 
 // you want your users to be able to access on the outside of your toaster vs what you don't want 
 // them to be able to touch.
+
+
+// Module Pattern -- emulates classes
+
+// var Module = function() {
+// 	var privateProperty = 'foo';
+
+// 	function privateMethod(args) {
+// 		// do something
+// 	};
+// 	return {
+// 		publicProperty: "",
+// 		publicMethod: function(args){
+// 			//do something
+// 		},
+// 		privilegedMethod: function(args){
+// 			privateMethod(args);
+// 		}
+// 	}
+// }
 		
 // call the function with the type of bread, any toppings, and how many minutes you want to toast it for
 
