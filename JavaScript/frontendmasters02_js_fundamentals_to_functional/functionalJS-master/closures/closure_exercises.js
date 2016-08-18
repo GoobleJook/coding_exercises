@@ -95,9 +95,26 @@ storyOfMyLife.erase(); // ''
 console.log(storyOfMyLife.value());
 console.log("There should be a blank line above this one.")
 
-// 5. Using the module pattern, design a toaster. Use your creativity here and think about what 
-// you want your users to be able to access on the outside of your toaster vs what you don't want 
-// them to be able to touch.
+var Car = function() {
+	var gasolineLevel = 10;
+
+	function useGas(amt) {
+		if(gasolineLevel - amt < 0) {
+			console.log("out of gas :[");
+		} else {
+			gasolineLevel -= amt;
+		}
+	};
+
+	return {
+		radioStation: "104.5",
+
+		changeStation: function(station) {
+			
+		}
+	}
+
+}
 
 
 // Module Pattern -- emulates classes
@@ -118,6 +135,11 @@ console.log("There should be a blank line above this one.")
 // 		}
 // 	}
 // }
+
+// 5. Using the module pattern, design a toaster. Use your creativity here and think about what 
+// you want your users to be able to access on the outside of your toaster vs what you don't want 
+// them to be able to touch.
+
 		
 // call the function with the type of bread, any toppings, and how many minutes you want to toast it for
 
