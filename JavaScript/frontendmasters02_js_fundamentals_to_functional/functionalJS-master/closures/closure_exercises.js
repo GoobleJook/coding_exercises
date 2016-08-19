@@ -126,6 +126,30 @@ var Toaster = function(){
 // (example:  you can only affect your health indirectly by eating a mushroom). If you are not familiar 
 // with Super Mario, choose another simple game for this example.
 
+var Mario = function(){
+	var health = 10;
+
+	function takeDamage(amt) {
+		if(health - amt < 0){
+			console.log("You've died!")
+		} else {
+			health -= amt;
+			console.log("Your health is " + health);
+		} 
+	};
+	function gainHealth(amt) {
+		health += amt;
+		console.log("Your health is " + health);
+	};
+
+	return {
+		mushroom: function(amt){ gainHealth(amt); },
+		greeble: function(amt){ takeDamage(amt); }
+	}	
+};
+
+
+
 
 // [EXTRA CREDIT] Why doesn't the code below work? This is a function that should return an array of functions that
 //  console.log() each person's name as a string when invoked. Fiddle with this function and inspect how it works
