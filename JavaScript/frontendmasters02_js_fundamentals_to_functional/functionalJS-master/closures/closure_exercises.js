@@ -156,10 +156,10 @@ var Mario = function(){
 //  , then try to fix it using a closure. Be prepared to explain to a partner how it worked before, 
 //  and how it works now with a closure. 
 
-// var checkAttendanceFunc = function(nameArr){
-// 	var resultArr = [];
-// 	for(var i = 0; i < nameArr.length; i++){
-// 		resultArr.push(function(){ console.log('Is', nameArr[i], 'present?', i)})
-// 	};
-// 	return resultArr;
-// };
+var checkAttendanceFunc = function(nameArr){
+	var question = function() {
+		for(var i = 0; i < nameArr.length; i++) {
+			console.log('Is ', nameArr[i], ' present?')
+		}  
+	}; return question;
+};
