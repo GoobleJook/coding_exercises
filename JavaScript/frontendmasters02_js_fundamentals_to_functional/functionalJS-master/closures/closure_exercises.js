@@ -80,7 +80,7 @@ var storyWriter = function() {
 // 			story = '';
 // 		}
 // 	}
-// }
+// } // their way
 
 
 var farmLoveStory = storyWriter();
@@ -103,16 +103,23 @@ console.log("There should be a blank line above this one.")
 		
 // call the function with the type of bread, any toppings, and how many minutes you want to toast it for
 
-var toaster = function(bread, toppings, time){
-    var millisecond_convert = 0.00001666666; // 1 minute / 60 seconds / 1000 milliseconds
-    var toast = function() {
-      alert("Your " + bread + " toast with " + toppings + " is ready!")		
-    };
-    return setTimeout(toast, time);
-};
+var Toaster = function(){
+	var toasted = "";
 
-var wheat_toast = toaster("wheat", "butter", 1000)
-wheat_toast;
+	function cook_bread(time, toppings, bread) {
+		if (time > 3000) {
+			toasted = "well done";
+		} else if (time > 2000) {
+			toasted = "medium brown";
+		} else {
+			toasted = "barely toasted";
+		} console.log("Your " + bread + " toast with " + toppings + " is " + toasted + "!")
+	};
+
+	return {
+		cook: function(time, toppings, bread){ cook_bread(time, toppings, bread); }
+	};
+};
 
 // 6. [EXTRA CREDIT] Use the module pattern to design a character in a Super Mario game. 
 // Think about what actions you can control in the game and other aspects you can't control directly 
