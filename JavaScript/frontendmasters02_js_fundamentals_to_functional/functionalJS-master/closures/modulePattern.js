@@ -7,17 +7,17 @@ var Car = function() {
 		} else {
 			gasolineLevel -= amt;
 		}
-	};
+	}; // private function
 
 	return {
 		radioStation: "104.5",
 
 		changeStation: function(station) {
-			
-		}
-	}
-
-}
+			this.radioStation = station;
+		},
+		go: function(speed){ useGas(speed); } // privilegedMethod
+	};
+};
 
 
 // Module Pattern -- emulates classes
@@ -36,5 +36,5 @@ var Car = function() {
 // 		privilegedMethod: function(args){
 // 			privateMethod(args);
 // 		}
-// 	}
-// }
+// 	};
+// };

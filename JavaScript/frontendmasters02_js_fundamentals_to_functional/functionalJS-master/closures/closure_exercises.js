@@ -95,46 +95,6 @@ storyOfMyLife.erase(); // ''
 console.log(storyOfMyLife.value());
 console.log("There should be a blank line above this one.")
 
-var Car = function() {
-	var gasolineLevel = 10;
-
-	function useGas(amt) {
-		if(gasolineLevel - amt < 0) {
-			console.log("out of gas :[");
-		} else {
-			gasolineLevel -= amt;
-		}
-	};
-
-	return {
-		radioStation: "104.5",
-
-		changeStation: function(station) {
-			
-		}
-	}
-
-}
-
-
-// Module Pattern -- emulates classes
-
-// var Module = function() {
-// 	var privateProperty = 'foo';
-
-// 	function privateMethod(args) {
-// 		// do something
-// 	};
-// 	return {
-// 		publicProperty: "",
-// 		publicMethod: function(args){
-// 			//do something
-// 		},
-// 		privilegedMethod: function(args){
-// 			privateMethod(args);
-// 		}
-// 	}
-// }
 
 // 5. Using the module pattern, design a toaster. Use your creativity here and think about what 
 // you want your users to be able to access on the outside of your toaster vs what you don't want 
