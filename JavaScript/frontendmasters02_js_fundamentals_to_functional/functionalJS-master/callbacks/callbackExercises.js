@@ -1,8 +1,18 @@
 #Callback Exercises
 
-1. Write a function, `funcCaller`, that takes a `func` (a function) and an `arg` (any data type). The function returns the `func` called with `arg`(as an argument).
+// 1. Write a function, `funcCaller`, that takes a `func` (a function) and an `arg` (any data type). 
+// The function returns the `func` called with `arg`(as an argument).
 
-1. Write a function, `firstVal`, that takes an array, `arr`, and a function, `func`, and calls `func` with the first index of the `arr`, the index # and the whole array.
+function funcCaller (func, arg) {
+	return func(arg);
+}
+
+var makeSquare = function(num) { return num * num };
+
+funcCaller(makeSquare, 3)
+
+// 2. Write a function, `firstVal`, that takes an array, `arr`, and a function, `func`, 
+// and calls `func` with the first index of the `arr`, the index # and the whole array.
 
 1. Change `firstVal` to work not only with arrays but also objects. Since objects are not ordered, you can use any key-value pair on the object.
 
