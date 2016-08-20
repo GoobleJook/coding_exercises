@@ -9,10 +9,12 @@ function funcCaller (func, arg) {
 
 var makeSquare = function(num) { return num * num };
 
-funcCaller(makeSquare, 3)
+funcCaller(makeSquare, 3);
 
 // 2. Write a function, `firstVal`, that takes an array, `arr`, and a function, `func`, 
 // and calls `func` with the first index of the `arr`, the index # and the whole array.
+
+
 
 1. Change `firstVal` to work not only with arrays but also objects. Since objects are not ordered, you can use any key-value pair on the object.
 
