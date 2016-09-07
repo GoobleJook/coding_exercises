@@ -8,7 +8,7 @@ private class HelloWorldTestClass {
 		insert b;
 
 		// Retrieve the new book
-		b = [SELECT Price__c FROM Book__c WHERE Id=:b.ID];
+		b = [SELECT Price__c FROM Book__c WHERE Id =:b.ID];
 		System.debug('Price after trigger fired: ' + b.Price__c);
 
 		// Test that the trigger correctly updated the price
