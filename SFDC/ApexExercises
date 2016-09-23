@@ -1,8 +1,0 @@
-ApexExercises
-
-List 
-	- Equivalent to array
-	- no specified length
-
-	List<String> colors = new List<String>();
-
