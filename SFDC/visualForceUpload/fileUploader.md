@@ -1,0 +1,1 @@
+These resources are taken from http://www.forcetree.com/2010/08/read-and-insert-records-from-csv-file.html in order to test VisualForce uploader techniques for Colliers project
