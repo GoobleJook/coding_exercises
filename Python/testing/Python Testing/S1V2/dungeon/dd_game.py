@@ -20,6 +20,13 @@ def clear():
 
 
 def build_cells(width, height):
+    """Create and return a 'width' x 'height' grid of two-tuples
+
+    >>> cells = build_cells(2,2)
+    >>> len(cells)
+    4 
+
+    """
     cells = []
     for y in range(height):
         for x in range(width):
@@ -28,6 +35,17 @@ def build_cells(width, height):
 
 
 def get_locations(cells):
+    """randomly pick starting locations for the monster, the door, 
+    and the player.
+
+    >>> cells = build_cells(2,2)
+    >>> m, d, p = get_locations(cells)
+    >>> m != d and d != p
+    True
+    >>> d in cells
+    True
+
+    """
     monster = random.choice(cells)
     door = random.choice(cells)
     player = random.choice(cells)
@@ -39,6 +57,8 @@ def get_locations(cells):
 
 
 def get_moves(player):
+    """Based on the tuple of the player's position, return the list
+    of acceptable moves
     x, y = player
     moves = ['LEFT', 'RIGHT', 'UP', 'DOWN']
     if x == 0:
