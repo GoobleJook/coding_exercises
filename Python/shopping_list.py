@@ -2,9 +2,9 @@ my_list = []
 accepting_input = True
 
 while accepting_input:
-  print('Enter DONE to stop entering items.')
+  print('Enter DONES to stop entering items.')
   item = input('Enter an item for your list: ')
-  if item.upper() == "DONE":
+  if item.upper() == "DONES":
     print(my_list)
     break
   else:
