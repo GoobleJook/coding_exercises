@@ -10,7 +10,7 @@ while True:
   if guess in guesses:
     print('You\'ve used that already!')
     print('Please try a different number.')
-    break
+    continue
   else:
     guesses.append(guess)
   
