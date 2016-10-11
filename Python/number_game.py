@@ -18,11 +18,12 @@ while num_guesses < guess_limit:
     guesses.append(guess)
   
   # Compare guess to secret number
-  if counter == guess_limit:
+  if num_guesses == guess_limit:
     Print("You've run out of guesses!")
     break
   if guess == secret_num:
     print('You got it! My number was {}'.format(secret_num))
+    print('You had {} guesses remaining.'.format(guess_limit - num_guesses))
     break
   elif guess < secret_num:
     position = "higher"
