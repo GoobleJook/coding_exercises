@@ -1,0 +1,25 @@
+Escape Characters:
+
+\w = any Unicode word character ( any letter -- upper or lower, numbers, and _ )
+\W = anything that isn't a Unicode character
+\s = any whitespace
+\S = anything that isn't whitespace
+\d = any number from 0 to 9
+\D = anything that isn't a number
+\b = word boundaries or edges of a word
+\B = anything that isn't the edge of a word
+
+Counts:
+{#} = something that occurs exactly # times
+{,#} = something that occurs 0 to # times
+{#,} = something that occurs greater than # times
+{#,$} = something that occurs between # and $ times, inclusive
+? = something that occurs 0 or 1 times
+* = something that occurs at least 0 times
++ = something that occurs at least once
+
+Sets:
+""" Any characters in the set will be looked for, and you can leave out duplicates """
+[aple] matches apple
+[a-z] matches any lowercase letters from a-z
+[^2] matches anything that is not 2
