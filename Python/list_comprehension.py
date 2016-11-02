@@ -34,3 +34,13 @@ print("Here are the times tables using loops: {}".format(times_tables()))
 
 lst2 = [i*j for i in range(10) for j in range(10)]
 print("Here is the times tabes using list comprehension:{}".format(lst2))
+
+
+""" Create a list (using comprehension) of all possible student IDs. Student IDs are created by two letters
+followed by two numbers. """
+
+lowercase = 'abcdefghijklmnopqrstuvwxyz'
+digits = '0123456789'
+
+answer = [a + b + c + d for a in lowercase for b in lowercase for c in digits for d in digits]
+print("The possible student IDs are: {}".format(answer))
