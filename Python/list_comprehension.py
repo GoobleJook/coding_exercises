@@ -21,3 +21,16 @@ print("This is a list of doctors in the room, found using a for loop: {}".format
 
 people_in_room_with_comprehension = [person for person in people_in_room if person.split()[0] != "Dr."]
 print("This is a list of people in the room who aren't doctors, found using list comprehension: {}".format(people_in_room_with_comprehension))
+
+
+def times_tables():
+	lst = []
+	for i in range(0,10):
+		for j in range(0,10):
+			lst.append(i*j)
+	return lst
+
+print("Here are the times tables using loops: {}".format(times_tables()))
+
+lst2 = [i*j for i in range(10) for j in range(10)]
+print("Here is the times tabes using list comprehension:{}".format(lst2))
