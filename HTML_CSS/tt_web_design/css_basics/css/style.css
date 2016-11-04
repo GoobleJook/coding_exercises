@@ -1,5 +1,9 @@
 /* Base Styles -------------------- */
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   color: #878787;
   margin: 0;
@@ -26,6 +30,11 @@ h3 {
   color: #48525c;
   line-height: 1.2;
   margin-bottom: 1.7em; /* 34px */
+}
+
+img {
+  max-width: 100%;
+  margin-bottom: 20px;
 }
 
 /* Pseudo-classes ------------------ */
@@ -105,10 +114,11 @@ a:active {
 .primary-content, 
 .secondary-content {
   /*the goal is to have a width of 960px, so need to subtract paddings*/
-  width: 860px;
+  width: 75%;
   padding-left: 50px;
   padding-right: 50px;
   margin: auto;
+  max-width: 900px;
 }
 
 .wildlife {
