@@ -62,6 +62,9 @@ a:active {
   background-color: #ffa949;
   height: 850px;
   padding-top: 170px;
+  background-image: url('../img/mountains.jpg');
+  background-size: 40%;
+  background-repeat: no-repeat;
 }
 
 .title {
