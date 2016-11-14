@@ -23,10 +23,39 @@ a {
 
 /* Substring Matching Attribute Selectors ---- */
 
+a[href^="http:"] {
+	color: #52bab3;
+	text-decoration: none;
+}
 
+a[href$=".pdf"] {
+	background-image: url('../beimg/icn-pdf.svg');
+}
 
+a[href$=".jpg"] {
+	background-image: url('../beimg/icn-picture.svg');
+}
 
+a[href$=".zip"] {
+	background-image: url('../beimg/icn-zip.svg');
+}
 
+a[href*="downloads"] {
+	background-repeat: no-repeat;
+	background-size: 18px 18px;
+	padding-left: 25px;
+}
+
+img[src*="thumb"] {
+	margin: 4px;
+	border: solid 2px;
+	width: 180px;
+	height: 140px;
+}
+
+img[src*="lake"] {
+	border: dotted red 2px;
+}
 
 
 
