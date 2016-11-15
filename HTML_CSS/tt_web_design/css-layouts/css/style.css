@@ -52,7 +52,7 @@ a {
 
 @media (min-width: 769px) {
   .wrap {
-    min-height: calc(100vh - 89px); 
+    min-height: calc(100vh - 89px); /*100% viewport - footer height*/
   }
 
   .container {
