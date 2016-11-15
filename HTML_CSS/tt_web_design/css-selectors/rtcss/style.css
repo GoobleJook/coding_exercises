@@ -25,3 +25,20 @@ input:not([type="submit"]) {
 nav a:not(:first-child) {
   margin-left: 15px;
 }
+
+/* Pseudo-elements  --------------------- */
+.paragraph::first-line {
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
+.paragraph::first-letter {
+  float: left;
+  font-size: 40px;
+  color: white;
+  padding: 5px 10px;
+  background: #384047;
+  margin: 10px 10px 0 0;
+  border-radius: 5px;
+  line-height: 1;
+}
