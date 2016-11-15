@@ -3,6 +3,10 @@
 ==================================== */
 /*using body as wrapper*/
 
+* {
+  box-sizing: border-box;
+}
+
 body {
 	line-height: 1.6;
 	color: #3a3a3a;  
@@ -37,8 +41,19 @@ a {
 }
 
 .container {
-  width: 70%;
-  margin: 0 auto;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 /* ---- Page Elements ---- */
 
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 769px) {
+  .container {
+    width: 70%;
+    margin: 0 auto;
+    max-width: 1000px;
+  } 
+}
