@@ -18,9 +18,14 @@ class Queue{
   }
 
   dequeue(){
-    if(this._end > this._start){ //check if there are values
+    if(this.size()){ //check if there are values
       let nextUp = this._storage[++this._start];
       delete this._storage[this._start];
+      
+      if(!this.size()) { //recheck after incrementing (!0 == true )
+        this._start = -1;
+        this._end = -1;
+      }
       return nextUp;
     }
   }
