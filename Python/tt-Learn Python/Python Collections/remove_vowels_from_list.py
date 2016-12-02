@@ -2,7 +2,17 @@
 
 # For example, if I give the script the word "Treehouse", I should get back "Trhs".
 
+
+# MY SOLUTION:
 def remove_vowels(word):
   # Loop through string. If letter is not a vowel, append it to a new string
   new_word = ""
-  
+  vowels = ['a','e','i','o','u']
+  for letter in word:
+    if letter not in vowels:
+      new_word += letter
+  print(new_word)
+
+remove_vowels("Treehouse")
+
+
