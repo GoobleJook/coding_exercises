@@ -20,8 +20,14 @@ c_list = a_list + b_list
 print(c_list)
 
 
+# You can use .extend() to add ranges to lists
 
+c_list.extend(range(6,11))
+print(c_list)
 
-# print('appending a_number to a_list =  {}'.format(a_list.append(a_number))) 
-
-# print('{} {}'.format(1,2))
+# You can use .insert() to place items into a list based on index
+alpha = list('acdf')
+print(alpha)
+alpha.insert(1,'b')
+alpha.insert(4,'e')
+print(alpha)
