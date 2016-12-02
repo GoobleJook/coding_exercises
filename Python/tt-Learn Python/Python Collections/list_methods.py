@@ -31,3 +31,23 @@ print(alpha)
 alpha.insert(1,'b')
 alpha.insert(4,'e')
 print(alpha)
+
+# Removing items from a list:
+
+# First you might need to get the index of the item, which we can do in two ways:
+# 1. Using the .index() method
+
+letter_list = list('abzdef')
+z_index = letter_list.index('z')
+print(z_index)
+
+# Then you can delete with the del keyword...
+del letter_list[2]
+print(letter_list)
+# which can be also used to delete strings and numbers but not characters in strings
+# or you can use the 
+# .remove() method
+my_list = [1,2,3,1]
+my_list.remove(1)
+print(my_list)
+# but remove only removes the first iteration of the item you want to remove
