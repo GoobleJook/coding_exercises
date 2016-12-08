@@ -61,4 +61,8 @@ def word_count(my_string):
         my_dict[word] += 1 
     print(my_dict)
 
-word_count('I am that I am')        
+word_count('I am that I am')    
+
+# using .items() on dictionaries   
+for key, value in my_dict.items():
+  print('{} {}'.format(key.title(),value)) 
