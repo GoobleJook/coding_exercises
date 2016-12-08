@@ -32,16 +32,17 @@ dicts = [
      'food': 'worlds'}
 ]
 
-string = "Hi, I'm {name} and I love to eat {food}!"
+statement = "Hi, my name is {name} and I like to eat {food}!"
 
 def string_factory(my_dict, my_string):
     new_list = []
     for element in my_dict:
-        new_list.append(my_string.format(**element))
-    
-    return new_list
+      new_list.append(my_string.format(**element))
+    for statement in new_list:
+      print(statement)
+  
 
-print(string_factory(dicts,string))
+string_factory(dicts,statement)
 
 # E.g. word_count("I am that I am") gets back a dictionary like:
 # {'i': 2, 'am': 2, 'that': 1}
