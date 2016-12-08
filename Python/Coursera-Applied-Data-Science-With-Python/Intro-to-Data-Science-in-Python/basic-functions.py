@@ -21,3 +21,9 @@ def add_numbers_with_flag(x,y,z=None,flag=False):
     return X+y+z
 
 print(add_numbers_with_flag(1,2,flag=True))
+
+def add_numbers_as_variable(x,y):
+  return x+y
+
+a = add_numbers_as_variable
+print(a(200,300))
