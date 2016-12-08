@@ -53,3 +53,25 @@
 
 # Tuples are often used to return values from functions, and it is a neat tick
 # to catch these tuples in multiple variables, using the above techniques
+
+# EXERCISE
+# Create a function named combo() that takes two iterables and returns a list of tuples. 
+# Each tuple should hold the first item in each list, then the second set, then the third, and so on. 
+# Assume the iterables will be the same length.
+
+def combo(itr1, itr2):
+  x = []
+  i = 0
+  while i < len(itr1):
+    val1 = itr1[i]
+    val2 = itr2[i]
+    tup = (itr1[i], itr2[i])
+    x.append(tup)
+    i += 1
+  return x
+
+a = [1,2,3]
+b = [4,5,6]
+
+print(combo(a,b))
+
