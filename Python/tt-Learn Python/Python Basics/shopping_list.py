@@ -23,6 +23,10 @@ def show():
   for item in shopping_list:
     item_num += 1
     print('{}: {}'.format(item_num, item))
+
+def add_item():
+  shopping_list.append(user_input)
+  print("Added {}. You now have {} items on your shopping list.".format(user_input,len(shopping_list)))
   
 help()
 
@@ -39,4 +43,4 @@ while True:
   elif user_input == 'show'.upper():
     show()
   else:
-    shopping_list.append(user_input)
+    add_item()
