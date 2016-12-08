@@ -51,3 +51,9 @@ my_list = [1,2,3,1]
 my_list.remove(1)
 print(my_list)
 # but remove only removes the first iteration of the item you want to remove
+
+
+# What does .pop() give us?
+
+
+
