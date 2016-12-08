@@ -33,6 +33,17 @@ def stats(teachers):
     teacher_list = []
   return stats_list
 
+# Great work! Finally, write a function named courses that takes the 
+# teachers dictionary. It should return a single list of all of the
+# courses offered by all of the teachers.
+
+def courses(teachers):
+  courses_taught = []
+  for teacher, courses in teachers.items():
+    for course in courses:
+      if course not in courses_taught:
+        courses_taught.append(course)
+  return courses_taught
 
 
 my_teachers = {
@@ -45,3 +56,4 @@ my_teachers = {
 print(most_classes(my_teachers))
 print(num_teachers(my_teachers))
 print(stats(my_teachers))
+print(courses(my_teachers))
