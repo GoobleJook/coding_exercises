@@ -43,3 +43,13 @@
 # >> 2
 # >> b
 # >> 1
+
+# Tuples can be used as pretty cool functional assignment techniques, too
+# def my_func():
+#   return (1, 2, 3)
+
+# my_tup = my_func()
+# x,y,z = my_tup
+
+# Tuples are often used to return values from functions, and it is a neat tick
+# to catch these tuples in multiple variables, using the above techniques
