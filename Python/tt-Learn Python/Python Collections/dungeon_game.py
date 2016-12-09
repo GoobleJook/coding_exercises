@@ -26,27 +26,19 @@ def build_grid():
       grid.append(dungeon)
   return grid
 
-def place_player():
-  player_position = r.choice(grid)
-  return player_position
+def set_locations(playing_board):
+  # locations are stored in a tuple in the following order
+  # player_position, monster_position, escape_door
+  player_position = r.choice(playing_board)
+  monster_position = r.choice(playing_board)
+  escape_door = r.choice(playing_board)
+  start_positions = (player_position, monster_position, escape_door)
+  return start_positions
 
-def place_monster():
-  monster_position = r.choice(grid)
-  if monster_position == player_position:
-    monster_position = r.choice(grid)
-  else:
-    return monster_position
-
-def place_door():
-  escape_door = r.choice(grid)
-  if escape_door == monster_position or escape_door == player_position:
-    escape_door = r.choice(grid)
-  else:
-    return escape_door
+ 
 
 
-
-build_grid()
-print(place_player())
-print(place_monster())
-print(place_door())
+print(build_grid())
+print(set_locations(grid))
+if player_position == monster_position or player_position == escape_door or monster_position == escape_door: 
+  set_locations(grid)
