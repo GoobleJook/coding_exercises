@@ -1,4 +1,4 @@
-import random
+import random as r
 
 # This is a 2d maze-like game with:
 # 1. Player in a random room in the grid
@@ -15,6 +15,9 @@ import random
 # - "Draw" a map as the game is played
 
 grid = []
+player_position = None
+monster_position = None
+escape_door = None
 
 def build_grid():
   for x in range(0,11):
@@ -23,5 +26,27 @@ def build_grid():
       grid.append(dungeon)
   return grid
 
+def place_player():
+  player_position = r.choice(grid)
+  return player_position
 
-print(build_grid())
+def place_monster():
+  monster_position = r.choice(grid)
+  if monster_position == player_position:
+    monster_position = r.choice(grid)
+  else:
+    return monster_position
+
+def place_door():
+  escape_door = r.choice(grid)
+  if escape_door == monster_position or escape_door == player_position:
+    escape_door = r.choice(grid)
+  else:
+    return escape_door
+
+
+
+build_grid()
+print(place_player())
+print(place_monster())
+print(place_door())
