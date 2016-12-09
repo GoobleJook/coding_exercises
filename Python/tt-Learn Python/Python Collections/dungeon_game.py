@@ -35,8 +35,12 @@ def set_locations(playing_board):
   start_positions = (player_position, monster_position, escape_door)
   return start_positions
 
- 
+def move_player(position)
+## move the player based on direction from current position
 
+def leave_maze()
+
+def eaten_by_monster()
 
 print(build_grid())
 print(set_locations(grid))
