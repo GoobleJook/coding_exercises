@@ -8,12 +8,12 @@
    
 var fs = require('fs');
 
-var buf = fs.readFileSync(process.argv[2]);
+var contents = fs.readFileSync(process.argv[2]);
+var newlines = contents.toString().split('\n').length - 1
+console.log(newlines);
 
-var fileToString = buf.toString();
+// note you can avoid the .toString() by passing 'utf8' as the
+// second argument to readFileSync, then you'll get a String!
+//
+// fs.readFileSync(process.argv[2], 'utf8').split('\n').length - 1
 
-var stringFileToArray = fileToString.split('\n');
-
-var newlinesInFile = stringFileToArray.length - 1; // Task is to count '\n' characters, not actual lines
-
-console.log(newlinesInFile);
