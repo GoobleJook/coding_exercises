@@ -1,20 +1,19 @@
-// process.argv; -- unnecessary, called in for loop
-var sum_of_argv_numbers = 0;
+// Write a program that uses a single synchronous filesystem operation to  
+//   read a file and print the number of newlines (\n) it contains to the  
+//   console (stdout), similar to running cat file | wc -l.  
+   
+//   The full path to the file to read will be provided as the first  
+//   command-line argument (i.e., process.argv[2]). You do not need to make  
+//   your own test file.  
+   
+var fs = require('fs');
 
-for (var i = 0; i < process.argv.length; i++) {
-  if(isNaN(process.argv[i]) === false) {
-    sum_of_argv_numbers += Number(process.argv[i]);
-  }
-}
+var buf = fs.readFileSync(process.argv[2]);
 
-console.log(sum_of_argv_numbers);
+var fileToString = buf.toString();
 
-// Their solution below seems brittle to me, as i is hardcoded but mine detects when the array item is a not NaN
-// Their solution breaks if you input a data type other than a number after the first two items in argv
-// var result = 0
-    
-//     for (var i = 2; i < process.argv.length; i++) {
-//       result += Number(process.argv[i])
-//     }
-    
-//     console.log(result)
+var stringFileToArray = fileToString.split('\n');
+
+var newlinesInFile = stringFileToArray.length - 1; // Task is to count '\n' characters, not actual lines
+
+console.log(newlinesInFile);
