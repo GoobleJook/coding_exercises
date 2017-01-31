@@ -34,7 +34,13 @@
     <h1>The Flex Item Properties</h1>
     <p><code>order || flex-grow || flex-shrink || flex-basis</code></p>
     <p>Order: move a flex-item from one position to another, like you would do with "sortable" lists, default: 0; lower values appear first</p>
-    <p><code>flex: 0 1 auto;</code> is shorthand for <code>flex-grow: 0; flex-shrink: 1; flex-basis: auto;</code> </p>
+    <p><code>flex: 0 1 auto;</code> is shorthand for <code>flex-grow: 0; flex-shrink: 1; flex-basis: auto;</code> Order is flex-grow, flex-shrink, then flex-basis (GSB)</p>
+    <p>Flex-basis defaults to zero if you only set G and S values. This is called absolute flex.</p>
+    <ul>
+      <li class="absflex">This is an absolute flex itme with flex-basis deaulted to 0</li>
+      <li class="relflex">This is a relative flex item with only flex-basis set</li>
+    </ul>
+    <p><code>li{flex:0 1 auto;}</code> is same as the default behavior of all flex items, <code>flex: default</code></p>
   </div>
 </body>
 </html>
