@@ -1,1 +1,1 @@
-$('.caption-text').text('Magic!');
+$('.caption-text').text('Magic!').css('background-color','orange');
