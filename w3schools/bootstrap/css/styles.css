@@ -1,3 +1,11 @@
+body {
+  font: 20px "Source Sans Pro", sans-serif;
+}
+
+p {
+  font-size: 16px;
+}
+
 .bg-1 {
   background-color: #1abc9c;
   color: #fff;
@@ -13,6 +21,11 @@
   color: #555;
 }
 
+.footer-background {
+  background-color: #2f2f2f;
+  color: #fff;
+}
+
 .container-fluid {
   padding-top: 70px;
   padding-bottom: 70px;
@@ -25,4 +38,21 @@
 #main-image {
   display:inline;
   width: 100%;
+}
+
+.navbar {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: 0;
+  border-radius: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+  letter-spacing: 5px;
+}
+
+.navbar li{
+  display:inline;
+}
+.navbar-nav li a:hover {
+  color: #1abc9c !important;
 }
