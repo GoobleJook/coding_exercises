@@ -1,0 +1,7 @@
+Motion Graphics:
+- Can be simple (sliding off screen), or
+- can be complex (changing the graphic on screen, usually with AI and Aftereffects)
+- Can be better at conveying message than an infographic, especially for products and services (explainer videos can increase conversion by 87%)
+  - If static, use images to tell story (posterboard). If a video (website), use narrator. Consider environment when creating.
+  - Animated storyboards work well with narrator
+  - GET SCRIPT, STORYBOARD, TIMING, AND ARTWORK APPROVED before you start implementing the project
