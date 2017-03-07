@@ -1,11 +1,25 @@
 var div = React.DOM.div
 var h1 = React.DOM.h1
 
+var MyTitle = React.createClass({
+  render: function () {
+    return (
+      div(null,
+        h1(null,'check out this component!')
+      ) 
+    )
+  }
+})
+
+var MyTitleFactory = React.createFactory(MyTitle)
+
 var MyFirstComponent = React.createClass({
   render: function () {
     return (
       div(null,
-        h1(null, 'This is my first component!')
+        MyTitleFactory(MyTitle),
+        MyTitleFactory(MyTitle),
+        MyTitleFactory(MyTitle)
       )
     )
   }
