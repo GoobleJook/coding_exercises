@@ -17,3 +17,5 @@ Ask these questions:
 3. Are performance and user requirements similar?
 4. Can the functions be modularized in the design?
 5. Does the value of flexibility justify the tradeoffs?
+
+THE ONLY REASON it MIGHT be justified, is if the answer to all 5 questions above is "yes". If ANY of them are "no", DON'T DO IT!
