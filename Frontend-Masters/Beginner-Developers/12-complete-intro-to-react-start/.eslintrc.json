@@ -1,0 +1,4 @@
+// This is to configure Lint to run with features from standard
+{
+  "extends": ["standard", "standard-react"]
+}
