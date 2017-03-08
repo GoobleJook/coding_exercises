@@ -12,7 +12,7 @@ const App = React.createClass({
           <input type='text' placeholder='Search' />
           <a>or Browse All</a>
         </div>
-      </div>  
+      </div>
     )
   }
 })
