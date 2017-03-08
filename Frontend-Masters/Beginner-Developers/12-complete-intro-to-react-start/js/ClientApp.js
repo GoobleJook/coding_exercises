@@ -1,5 +1,7 @@
 /* global React ReactDOM */
 
+// The above is added to tell ESLint that these are global variables that are supposed to be undefined
+
 var div = React.DOM.div
 var h1 = React.DOM.h1
 
