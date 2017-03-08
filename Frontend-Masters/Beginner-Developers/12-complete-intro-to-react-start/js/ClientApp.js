@@ -1,19 +1,8 @@
-/* global React ReactDOM */
-
-// The above is added to tell ESLint that these are global variables that are supposed to be undefined
+import React from 'react'
+import ReactDOM from 'react-dom'
+import MyTitle from './MyTitle'
 
 var div = React.DOM.div
-var h1 = React.DOM.h1
-
-var MyTitle = React.createClass({
-  render: function () {
-    return (
-      div(null,
-        h1({ style: { color: this.props.color, fontWeight: 'bold', textAlign: 'center' } }, this.props.title)
-      )
-    )
-  }
-})
 
 var MyTitleFactory = React.createFactory(MyTitle)
 
