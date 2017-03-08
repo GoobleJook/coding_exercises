@@ -1,0 +1,104 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/YBNinja/.nvm/versions/node/v6.9.1/bin/node',
+1 verbose cli   '/Users/YBNinja/.nvm/versions/node/v6.9.1/bin/npm',
+1 verbose cli   'bug',
+1 verbose cli   'complete-intro-to-react' ]
+2 info using npm@3.10.8
+3 info using node@v6.9.1
+4 silly fetchPackageMetaData complete-intro-to-react
+5 silly fetchNamedPackageData complete-intro-to-react
+6 silly mapToRegistry name complete-intro-to-react
+7 silly mapToRegistry using default registry
+8 silly mapToRegistry registry https://registry.npmjs.org/
+9 silly mapToRegistry data Result {
+9 silly mapToRegistry   raw: 'complete-intro-to-react',
+9 silly mapToRegistry   scope: null,
+9 silly mapToRegistry   escapedName: 'complete-intro-to-react',
+9 silly mapToRegistry   name: 'complete-intro-to-react',
+9 silly mapToRegistry   rawSpec: '',
+9 silly mapToRegistry   spec: 'latest',
+9 silly mapToRegistry   type: 'tag' }
+10 silly mapToRegistry uri https://registry.npmjs.org/complete-intro-to-react
+11 verbose request uri https://registry.npmjs.org/complete-intro-to-react
+12 verbose request no auth needed
+13 info attempt registry request try #1 at 4:10:30 PM
+14 verbose request using bearer token for auth
+15 verbose request id f63c8d5ec3a8091f
+16 http request GET https://registry.npmjs.org/complete-intro-to-react
+17 http 404 https://registry.npmjs.org/complete-intro-to-react
+18 verbose headers { 'content-type': 'application/json',
+18 verbose headers   'cache-control': 'max-age=0',
+18 verbose headers   'content-length': '2',
+18 verbose headers   'accept-ranges': 'bytes',
+18 verbose headers   date: 'Wed, 08 Mar 2017 21:10:31 GMT',
+18 verbose headers   via: '1.1 varnish',
+18 verbose headers   connection: 'keep-alive',
+18 verbose headers   'x-served-by': 'cache-atl6250-ATL',
+18 verbose headers   'x-cache': 'MISS',
+18 verbose headers   'x-cache-hits': '0',
+18 verbose headers   'x-timer': 'S1489007430.879953,VS0,VE340',
+18 verbose headers   vary: 'Accept-Encoding' }
+19 silly get cb [ 404,
+19 silly get   { 'content-type': 'application/json',
+19 silly get     'cache-control': 'max-age=0',
+19 silly get     'content-length': '2',
+19 silly get     'accept-ranges': 'bytes',
+19 silly get     date: 'Wed, 08 Mar 2017 21:10:31 GMT',
+19 silly get     via: '1.1 varnish',
+19 silly get     connection: 'keep-alive',
+19 silly get     'x-served-by': 'cache-atl6250-ATL',
+19 silly get     'x-cache': 'MISS',
+19 silly get     'x-cache-hits': '0',
+19 silly get     'x-timer': 'S1489007430.879953,VS0,VE340',
+19 silly get     vary: 'Accept-Encoding' } ]
+20 silly fetchPackageMetaData Error: Registry returned 404 for GET on https://registry.npmjs.org/complete-intro-to-react
+20 silly fetchPackageMetaData     at makeError (/Users/YBNinja/.nvm/versions/node/v6.9.1/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:302:12)
+20 silly fetchPackageMetaData     at CachingRegistryClient.<anonymous> (/Users/YBNinja/.nvm/versions/node/v6.9.1/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:280:14)
+20 silly fetchPackageMetaData     at Request._callback (/Users/YBNinja/.nvm/versions/node/v6.9.1/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:210:14)
+20 silly fetchPackageMetaData     at Request.self.callback (/Users/YBNinja/.nvm/versions/node/v6.9.1/lib/node_modules/npm/node_modules/request/request.js:187:22)
+20 silly fetchPackageMetaData     at emitTwo (events.js:106:13)
+20 silly fetchPackageMetaData     at Request.emit (events.js:191:7)
+20 silly fetchPackageMetaData     at Request.<anonymous> (/Users/YBNinja/.nvm/versions/node/v6.9.1/lib/node_modules/npm/node_modules/request/request.js:1044:10)
+20 silly fetchPackageMetaData     at emitOne (events.js:96:13)
+20 silly fetchPackageMetaData     at Request.emit (events.js:188:7)
+20 silly fetchPackageMetaData     at IncomingMessage.<anonymous> (/Users/YBNinja/.nvm/versions/node/v6.9.1/lib/node_modules/npm/node_modules/request/request.js:965:12)
+20 silly fetchPackageMetaData  error for complete-intro-to-react { Error: Registry returned 404 for GET on https://registry.npmjs.org/complete-intro-to-react
+20 silly fetchPackageMetaData     at makeError (/Users/YBNinja/.nvm/versions/node/v6.9.1/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:302:12)
+20 silly fetchPackageMetaData     at CachingRegistryClient.<anonymous> (/Users/YBNinja/.nvm/versions/node/v6.9.1/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:280:14)
+20 silly fetchPackageMetaData     at Request._callback (/Users/YBNinja/.nvm/versions/node/v6.9.1/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:210:14)
+20 silly fetchPackageMetaData     at Request.self.callback (/Users/YBNinja/.nvm/versions/node/v6.9.1/lib/node_modules/npm/node_modules/request/request.js:187:22)
+20 silly fetchPackageMetaData     at emitTwo (events.js:106:13)
+20 silly fetchPackageMetaData     at Request.emit (events.js:191:7)
+20 silly fetchPackageMetaData     at Request.<anonymous> (/Users/YBNinja/.nvm/versions/node/v6.9.1/lib/node_modules/npm/node_modules/request/request.js:1044:10)
+20 silly fetchPackageMetaData     at emitOne (events.js:96:13)
+20 silly fetchPackageMetaData     at Request.emit (events.js:188:7)
+20 silly fetchPackageMetaData     at IncomingMessage.<anonymous> (/Users/YBNinja/.nvm/versions/node/v6.9.1/lib/node_modules/npm/node_modules/request/request.js:965:12)
+20 silly fetchPackageMetaData   pkgid: 'complete-intro-to-react',
+20 silly fetchPackageMetaData   statusCode: 404,
+20 silly fetchPackageMetaData   code: 'E404' }
+21 verbose stack Error: Registry returned 404 for GET on https://registry.npmjs.org/complete-intro-to-react
+21 verbose stack     at makeError (/Users/YBNinja/.nvm/versions/node/v6.9.1/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:302:12)
+21 verbose stack     at CachingRegistryClient.<anonymous> (/Users/YBNinja/.nvm/versions/node/v6.9.1/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:280:14)
+21 verbose stack     at Request._callback (/Users/YBNinja/.nvm/versions/node/v6.9.1/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:210:14)
+21 verbose stack     at Request.self.callback (/Users/YBNinja/.nvm/versions/node/v6.9.1/lib/node_modules/npm/node_modules/request/request.js:187:22)
+21 verbose stack     at emitTwo (events.js:106:13)
+21 verbose stack     at Request.emit (events.js:191:7)
+21 verbose stack     at Request.<anonymous> (/Users/YBNinja/.nvm/versions/node/v6.9.1/lib/node_modules/npm/node_modules/request/request.js:1044:10)
+21 verbose stack     at emitOne (events.js:96:13)
+21 verbose stack     at Request.emit (events.js:188:7)
+21 verbose stack     at IncomingMessage.<anonymous> (/Users/YBNinja/.nvm/versions/node/v6.9.1/lib/node_modules/npm/node_modules/request/request.js:965:12)
+22 verbose statusCode 404
+23 verbose pkgid complete-intro-to-react
+24 verbose cwd /Users/YBNinja/Documents/coding-exercises/Frontend-Masters/Beginner-Developers/12-complete-intro-to-react-start
+25 error Darwin 15.6.0
+26 error argv "/Users/YBNinja/.nvm/versions/node/v6.9.1/bin/node" "/Users/YBNinja/.nvm/versions/node/v6.9.1/bin/npm" "bug" "complete-intro-to-react"
+27 error node v6.9.1
+28 error npm  v3.10.8
+29 error code E404
+30 error 404 Registry returned 404 for GET on https://registry.npmjs.org/complete-intro-to-react
+31 error 404
+32 error 404 'complete-intro-to-react' is not in the npm registry.
+33 error 404 You should bug the author to publish it (or use the name yourself!)
+34 error 404 Note that you can also install from a
+35 error 404 tarball, folder, http url, or git url.
+36 verbose exit [ 1, true ]

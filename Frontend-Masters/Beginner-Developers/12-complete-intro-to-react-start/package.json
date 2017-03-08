@@ -8,7 +8,8 @@
   "scripts": {
     "lint": "eslint js/**/*.js webpack.config.js",
     "build": "webpack",
-    "watch": "webpack --watch"
+    "dev": "webpack-dev-server",
+    "watch": "npm run build -- --watch"
   },
   "dependencies": {
     "axios": "0.15.2",
