@@ -1,8 +1,8 @@
 import React from 'react'
 
 const Landing = React.createClass({
-  render() {
-    return(
+  render () {
+    return (
       <div className='landing'>
         <h1>DemoApp</h1>
         <input type='text' placeholder='Search' />
