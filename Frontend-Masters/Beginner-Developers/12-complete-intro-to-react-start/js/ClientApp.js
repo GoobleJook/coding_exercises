@@ -10,7 +10,7 @@ const App = React.createClass({
         <div className='landing'>
           <h1>DemoApp</h1>
           <input type='text' placeholder='Search' />
-          <a>or Browse All</a>
+          <a>or Browse All of the things</a>
         </div>
       </div>
     )
