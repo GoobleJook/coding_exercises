@@ -6,10 +6,12 @@
   "author": "Brian Holt <btholt@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint js/**/*.js webpack.config.js",
+    "test": "NODE_ENV=test jest",
+    "update-test": "npm run test -- -u",
     "build": "webpack",
     "dev": "webpack-dev-server",
-    "watch": "npm run build -- --watch"
+    "lint": "eslint js/**/*.js server.js",
+    "watch": "webpack --watch"
   },
   "dependencies": {
     "axios": "0.15.2",
@@ -18,6 +20,7 @@
     "lodash": "4.16.2",
     "preact": "^6.4.0",
     "preact-compat": "^3.9.3",
+    "preact-render-to-string": "^3.3.0",
     "react": "15.3.2",
     "react-dom": "15.3.2",
     "react-redux": "4.4.0",
