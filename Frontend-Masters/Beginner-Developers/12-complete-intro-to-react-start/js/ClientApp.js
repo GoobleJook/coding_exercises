@@ -9,6 +9,7 @@ const App = React.createClass({
   render () {
     return (
       <HashRouter>
+        {/*HashRouter is a hack and should not be used unless you can't connect to React Router or some real router*/}
         <div className='app'>
           <Match exactly pattern='/' component={Landing} />
         </div>
