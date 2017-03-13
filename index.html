@@ -9,11 +9,14 @@
   <script src="node_modules/react/dist/react.js"></script>
   <script src="node_modules/react-dom/dist/react-dom.js"></script>
   <script>
+    var div = React.DOM.div
+    var h1 = React.DOM.h1
+    
     var MyFirstComponent = React.createClass({
       render: function () {
         return (
-          React.DOM.div(null,
-            React.DOM.h1(null, 'This is my first React component!')
+          div(null,
+            h1(null, 'This is my first React component!')
           )
         )
       }
