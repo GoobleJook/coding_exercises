@@ -35,3 +35,5 @@ npm run lint -s -- --fix for autofix
 can add <nav> under <HashRouter>, which will build a navbar on every page
 
 { /* This is a working comment */ }
+
+don't use webpack-dev-server in production
