@@ -16,3 +16,10 @@ Babel commands (in development):
 4. webpack --module-bind='js=babel' js/ClientApp.js public/bundle.js
 5. Write webpack.config.js in root
 6. Can now just run webpack
+
+
+To run webpack watch after this:
+use either
+webpack --watch 
+or
+npm run build -- --watch
