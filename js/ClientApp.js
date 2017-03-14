@@ -12,7 +12,7 @@ var MyFirstComponent = React.createClass({
       div(null,
         MyTitleFactory({ title: 'props are the best', color: 'peru' }),
         MyTitleFactory({ title: 'props are the worst', color: 'rebeccapurple' }),
-        MyTitleFactory({ title: 'props are meh' })
+        MyTitleFactory({ title: 'props are meh', color: 'green' })
      )
     )
   }
