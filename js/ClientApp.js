@@ -7,7 +7,7 @@ var MyTitle = React.createClass({
   render: function () {
     return (
       div(null,
-        h1(null, this.props.title)
+        h1({ style: { color: this.props.color, fontWeight: 'bold' }}, this.props.title)
       )
     )
   }
@@ -20,11 +20,11 @@ var MyFirstComponent = React.createClass({
   render: function () {
     return (
       div(null,
-        MyTitleFactory({ title: 'props are the best' }),
-        MyTitleFactory({ title: 'props are the worst' }),
+        MyTitleFactory({ title: 'props are the best', color: 'peru' }),
+        MyTitleFactory({ title: 'props are the worst', color: 'rebeccapurple' }),
         MyTitleFactory({ title: 'props are meh' })
-        )
-      )
+     )
+    )
   }
 })
 
