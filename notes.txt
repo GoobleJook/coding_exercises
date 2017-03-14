@@ -31,3 +31,7 @@ Can only have one top-level div (so you can wrap everything in a div, like with 
 npm run lint 
 npm run lint -s to 'get rid of all the npm output'
 npm run lint -s -- --fix for autofix
+
+can add <nav> under <HashRouter>, which will build a navbar on every page
+
+{ /* This is a working comment */ }
