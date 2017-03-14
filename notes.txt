@@ -14,3 +14,5 @@ Babel commands (in development):
 2b. "loose": true -- makes it smaller because it leaves out crazy edge cases and uses only common polyfills
 3. Only include plugins you need for production
 4. webpack --module-bind='js=babel' js/ClientApp.js public/bundle.js
+5. Write webpack.config.js in root
+6. Can now just run webpack
