@@ -1,0 +1,7 @@
+Webpack commands:
+
+Build for debug mode:
+webpack js/ClientApp.js public/bundle.js
+
+Build for Production:
+NODE_ENV=production webpack -p js/ClientApp.js public/bundle.js
