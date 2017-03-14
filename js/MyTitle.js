@@ -14,7 +14,7 @@ var MyTitle = React.createClass({
           {this.props.title}
         </h1>
       </div>
-    )
+    ) 
   }
 })
 
