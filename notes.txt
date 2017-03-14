@@ -5,3 +5,12 @@ webpack js/ClientApp.js public/bundle.js
 
 Build for Production:
 NODE_ENV=production webpack -p js/ClientApp.js public/bundle.js
+
+
+Babel commands (in development):
+1. create .babelrc (a JSON file)
+2. plugin and presets, presets are collections of plugins
+2a. "modules": false for webpack so webpack bundles not babel, so uglify can strip out code (tree shaking)
+2b. "loose": true -- makes it smaller because it leaves out crazy edge cases and uses only common polyfills
+3. Only include plugins you need for production
+4. webpack --module-bind='js=babel' js/ClientApp.js public/bundle.js
