@@ -5,22 +5,25 @@ var Map = require('./Map');
 var CurrentLocation = require('./CurrentLocation');
 var LocationList = require('./LocationList');
 
-var App = React.createClass ({
 
-  get InitialState() {
+var App = React.createClass({
+
+  getInitialState() {
+
     // Extract the favorite locations from local storage
+
     var favorites = [];
 
     if(localStorage.favorites){
-      favorites = JSON.parse(localStorage.favorites)
+      favorites = JSON.parse(localStorage.favorites);
     }
 
     return {
       favorites: favorites,
-      currentAddress: 'Miami, Florida',
+      currentAddress: 'Paris, France',
       mapCoordinates: {
-        lat: 25.7617,
-        lng: 80.1918
+        lat: 48.856614,
+        lng: 2.3522219
       }
     };
   },
