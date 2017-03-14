@@ -27,3 +27,7 @@ npm run build -- --watch
 can run 'npm run watch' after "watch" change to package.json
 
 Can only have one top-level div (so you can wrap everything in a div, like with Bootstrap)
+
+npm run lint 
+npm run lint -s to 'get rid of all the npm output'
+npm run lint -s -- --fix for autofix
