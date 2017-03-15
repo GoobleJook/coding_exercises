@@ -1,5 +1,5 @@
 import React from 'react'
-const { shape, string } = React.PropTypes
+const { string } = React.PropTypes
 
 const ShowCard = React.createClass({
   propTypes: {

@@ -39,3 +39,5 @@ can add <nav> under <HashRouter>, which will build a navbar on every page
 don't use webpack-dev-server in production
 
 npm run dev
+
+The only thing that can modify the state of a component is the component itself
