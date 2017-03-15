@@ -1,7 +1,6 @@
 import React from 'react'
 import ShowCard from './ShowCard'
 import preload from '../public/data.json'
-const { shape, string } = React.PropTypes
 
 const Search = React.createClass({
   render () {
