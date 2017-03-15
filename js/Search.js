@@ -8,13 +8,12 @@ const Search = React.createClass({
       <div className='search'>
         {preload.shows.map((show) => {
           return (
-            <ShowCard show={show} />    
+            <ShowCard key={show.imdbID} show={show} />
           )
         })}
       </div>
     )
   }
 })
-
 
 export default Search
