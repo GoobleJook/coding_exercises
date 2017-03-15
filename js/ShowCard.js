@@ -11,7 +11,7 @@ const ShowCard = React.createClass({
     })
   },
   render () {
-    const { poster, title, year, description } = this.props.show
+    const { poster, title, year, description } = this.props
     return (
       <div className='show-card'>
         <img src={`/public/img/posters/${poster}`} />
