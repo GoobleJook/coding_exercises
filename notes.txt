@@ -46,3 +46,6 @@ forceUpdate() is available as an option to setState(), usually only used for int
 
 filter() is a boolean method that keeps item in the array if true and kicks if false
 
+Jest for testing uses Jasmine 2 as its engine and is much better than the original nightmare that Jest was.
+Jest can snapshot test, which is when you give it how the file should look and Jest compares against that, kind of like a diff
+
