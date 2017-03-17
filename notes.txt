@@ -6,6 +6,9 @@ webpack js/ClientApp.js public/bundle.js
 Build for Production:
 NODE_ENV=production webpack -p js/ClientApp.js public/bundle.js
 
+Build for Testing:
+NODE_ENV=test jest --no-cache (no-cache at least on first retry after error)
+
 
 Babel commands (in development):
 1. create .babelrc (a JSON file)
