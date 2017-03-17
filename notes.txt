@@ -41,3 +41,8 @@ don't use webpack-dev-server in production
 npm run dev
 
 The only thing that can modify the state of a component is the component itself
+
+forceUpdate() is available as an option to setState(), usually only used for intgration with other services, such as D3. Use setState, always, if you want to stay happy.
+
+filter() is a boolean method that keeps item in the array if true and kicks if false
+
