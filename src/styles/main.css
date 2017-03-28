@@ -2,19 +2,23 @@
   box-sizing: border-box; 
 }
 
-body {
-  background-image: url("http://www.pipelineworkspaces.com/esp/wp-content/uploads/2012/12/Shelly_Baer_Robert_Hernandez.jpeg");
-  background-position: center top;
-  background-repeat: repeat;
-  background-size: 100%;
-  transform: scale(1.5)
+header {
+  padding-top: 50px;
 }
 
-div {
-  margin-left: 200px;
-  margin-top: 250px;
-  font-size: 200px;
-  color: pink;
-  font-weight: bold;
-  font-style: italic;
+.label {
+  height: 40px;
+}
+
+.label-color {
+  width: 24px;
+  height: 24px;
+  border: 1px solid grey;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+span {   
+  margin-left: 10px;
+  margin-right: 10px;
 }
