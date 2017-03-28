@@ -3,5 +3,16 @@
 }
 
 body {
-  background: blue;
+  background: url("http://www.boldbeautyproject.com/wp-content/uploads/2015/05/shellyMiddle.png");
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+div {
+  margin-left: 200px;
+  margin-top: 250px;
+  font-size: 200px;
+  color: pink;
+  font-weight: bold;
+  font-style: italic;
 }
