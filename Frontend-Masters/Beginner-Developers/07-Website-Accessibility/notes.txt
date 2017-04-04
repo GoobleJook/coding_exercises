@@ -1,0 +1,21 @@
+Keyboard
+
+Don't just make kepboard friendly; consider using keyboard shortcuts
+  - examples: Twitter, Facebook, Reddit (other big social networks?) Google Mail(?)
+
+
+Tabbable Items:
+<a>
+<button>
+<input>
+<select>
+<textarea>
+<iframe>
+
+Make tabbable if not by default:
+add tabindex property; 
+  - <div tabindex="0">I can be focused</div>
+  - Values of tabindex:
+    - Negative value means that the element should be focusable, but not be reachable via sequential keyboard navigation (used for JS).
+    - 0 Means that the element should be focusable and reachable via sequential keyboard navigation, but its relative order is defined by platform convention.
+    - A positive value means it should be focusable and reacable via sequential keyboard navigation, its relative order is defined by the value of the attribute; the sequential follow the increasing order of the tabindex. If several elements share the same tabindex, their relative order follows their relative position in the document.
