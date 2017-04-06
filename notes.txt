@@ -62,5 +62,5 @@ Write simple, non-robust tests when you have reached a stable version of a compo
 
 JEST WARNINGS:
 Jest will dig beneath top layer and this can cause problems. For example, Search.js errors might show up on a test of ShowCard.js because Search.js is UNDERNEATH ShowCard.js
-  Solution: Enzyme
+  Solution: Enzyme should be used for react.js testing
 
