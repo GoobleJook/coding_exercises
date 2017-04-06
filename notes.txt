@@ -52,3 +52,15 @@ filter() is a boolean method that keeps item in the array if true and kicks if f
 Jest for testing uses Jasmine 2 as its engine and is much better than the original nightmare that Jest was.
 Jest can snapshot test, which is when you give it how the file should look and Jest compares against that, kind of like a diff
 
+Need to change .babelrc to accept components when in test environment
+
+run with jest --no-cache if you change the .babelrc ENV
+If you modify babel test environment
+
+JEST USE CASES:
+Write simple, non-robust tests when you have reached a stable version of a component. Test against this stable snapshot version.
+
+JEST WARNINGS:
+Jest will dig beneath top layer and this can cause problems. For example, Search.js errors might show up on a test of ShowCard.js because Search.js is UNDERNEATH ShowCard.js
+  Solution: Enzyme
+
