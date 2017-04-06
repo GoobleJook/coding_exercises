@@ -5,7 +5,7 @@ import preload from '../public/data.json'
 const Search = React.createClass({
   getInitialState () {
     return {
-      searchTerm: 'this is the default string'
+      searchTerm: ''
     }
   },
   handleSearchTermChange (event) {
@@ -15,7 +15,7 @@ const Search = React.createClass({
     return (
       <div className='search'>
         <header>
-          <h1>Robert Video</h1>
+          <h1>Rob's Video</h1>
           <input onChange={this.handleSearchTermChange} value={this.state.searchTerm} type='text' placeholder='Search' />
         </header>
         <div>
