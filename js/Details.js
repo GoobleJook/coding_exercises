@@ -4,12 +4,14 @@ const Details = React.createClass({
   render () {
     return (
       <div className='details'>
-        <pre><code>
-          {JSON.stringify(this.props, null, 4)}
-        </code></pre>
+        <h1>oh hahaha</h1>
       </div>
     )
   }
 })
+
+// const Details = () => {
+//   return <h1>hahahahaha</h1>
+// }
 
 export default Details
