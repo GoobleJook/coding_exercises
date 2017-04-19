@@ -2,22 +2,44 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
 
-class Square extends React.Component {
-  render() {
-    return (
-      <button className="square">
-        {/* TODO */}
+function Square(props) {
+  return (
+    <button className="square" onClick={() => props.onClick()}>
+        {props.value}
       </button>
-    );
-  }
-}
+    )
+} // For classes that only contain a render(), it is easier to set them up as a function, like with Square
 
 class Board extends React.Component {
+  constructor() {
+    super()
+    this.state = {
+      squares: Array(9).fill(null),
+      xIsNext: true,
+    }
+  }
   renderSquare(i) {
-    return <Square />;
+    return <Square value={this.state.squares[i]} onClick={() => this.handleClick(i)} />
+  }
+  handleClick(i) {
+    const squares = this.state.squares.slice()
+    if (calculateWinner(squares) || squares[i]) {
+      return
+    }
+    squares[i] = this.state.xIsNext ? 'X' : 'O'
+    this.setState({
+      squares: squares,
+      xIsNext: !this.state.xIsNext,
+    })
   }
   render() {
-    const status = 'Next player: X';
+    const winner = calculateWinner(this.state.squares)
+    let status
+    if (winner) {
+      status = 'Winner: ' + winner 
+    } else {
+      status = 'Next player: ' + (this.state.xIsNext? 'X' : 'O')
+    }
     return (
       <div>
         <div className="status">{status}</div>
@@ -42,6 +64,15 @@ class Board extends React.Component {
 }
 
 class Game extends React.Component {
+  constructor() {
+    super()
+    this.state = {
+      history: [{
+        squares: Array(9).fill(null)
+      }],
+      xIsNext: true
+    }
+  }
   render() {
     return (
       <div className="game">
