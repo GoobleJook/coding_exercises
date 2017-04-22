@@ -1,6 +1,6 @@
 import React from 'react'
 import ShowCard from './ShowCard'
-const { arrayOf, shape, string } = React.propTypes
+const { arrayOf, shape, string } = React.PropTypes
 
 const Search = React.createClass({
   propTypes: {
@@ -26,16 +26,12 @@ const Search = React.createClass({
         </header>
         <div>
           {this.props.shows
-            .filter((show) => {
-              return `${show.title} ${show.description}`
-              .toUpperCase().indexOf(this.state.searchTerm
-              .toUpperCase()) >= 0
-            })
-            .map((show) => {
-              return (
-                <ShowCard key={show.imdbID} {...show} />
-              )
-            })}
+           .filter((show) => `${show.title} ${show.description}`.toUpperCase().indexOf(this.state.searchTerm.toUpperCase()) >= 0)
+           .map((show) => {
+             return (
+               <ShowCard key={show.imdbID} {...show} />
+            )
+           })}
         </div>
       </div>
     )
