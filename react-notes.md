@@ -63,4 +63,35 @@ Write simple, non-robust tests when you have reached a stable version of a compo
 JEST WARNINGS:
 Jest will dig beneath top layer and this can cause problems. For example, Search.js errors might show up on a test of ShowCard.js because Search.js is UNDERNEATH ShowCard.js
   Solution: Enzyme should be used for react.js testing
+COVERAGE TESTING IN JEST:
+npm run test -- --coverage
+open coverage/lcov-report/index.html
+
+DEBUGGING TRICKS:
+Add this to component to see path
+
+render () {
+    return (
+      <pre><code>
+        {JSON.stringify(this.props, null, 4)}
+      </code></pre>
+    )
+  }
+
+REACT LIFECYCLE METHODS
+
+getInitialState/constructor (ES6)
+componentWillMount -- Called right before your component is put in the DOM
+
+componentDidMount -- Called right after, which is more useful because componentDidMount does not get put into Node.js, which componentWillMount does -- it makes more sense to keep it in the DOM and out of Node.js; also browser APIs are available to componentDidMount; Uses AJAX, jQuery, 
+
+componentWillUnMount -- right before it leaves the DOM; used almost exclusively for cleanup
+
+getDefaultProps -- usually called at root level of application; useful for dependency 
+
+shouldComponentUpdate -- used for performance items; React looks for changes in state before re-rendering, which can either miss things or get expensive, depending on how deeply it needs to dig. This is allows you to get more granular with change specifications. AVOID UNTIL YOU MUST USE IT -- React is very good at what it does.
+
+Unless you have to, keep SVG out of React components and leave it in the browser (?)
+
+componentWillUpdate -- Not used much. Maybe for D3?
 
