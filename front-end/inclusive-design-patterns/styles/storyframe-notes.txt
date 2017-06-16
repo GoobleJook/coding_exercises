@@ -1,0 +1,51 @@
+Taken from (https://uxdesign.cc/storyframes-before-wireframes-starting-designs-in-the-text-editor-ec69db78e6e4)
+
+Storyframes:
+  - look like a script
+  - focus on heirachry and page structure, above layout or final copy
+
+Example of Dropbox storyframe:
+"Hi, we are Dropbox.
+We are reinventing teamwork (and we keep releasing tools and software that proves that).
+
+We are designed around the way you work.
+
+You can take your docs anywhere -- whether it is your phone or on the road.
+
+You can also upload videos pretty quickly and send to anyone (even if they don't use Dropbox).
+
+You can manage your photos fairly easily too. We make it pretty simple to organize them.
+
+And we also have tools for real-time collaboration with your peers, whether you are working together on a presentation or constantly updating files in a folder.
+
+Of course, we're safe. You'll never lose a file again.
+
+Interested? Get started now.
+
+PS In case this is not what you are looking for, here are a few other things you can do."
+
+Best Practices:
+1. Start by writing it all down
+  - Brain dump
+  - Each paragrah is a module
+  - Each sententce is an element that you will eventually add to design
+  - "How would I explain to a frien, in a conversation or an email, this thing/topic/product/story I am trying to communicate?"
+  - Time: ~ 15 minutes
+2. Keep it short
+  - Trim after brain dump, after break
+  - Focus on what USERS need to know, and their context
+3. Pay with multiple stories
+  - How can you reorder elements to tell different stories?
+  - Which verions sound more natural?
+  - Swap paragraphs and/or reintroduce content removed in step 2.
+4. Shop it around
+  - It's a draft you share with your teams
+  - Move onto to wireframes/mockups after stakeholder buy-in (understanding this is not the final version.)
+
+  Wrapping up (questions to ask as you move onto the more traditional design part of the design process):
+    - What is the best way of displaying this information?
+    - Which parts of text can be grouped into modules?
+    - Which parts of the story can be replaced with images, videoes, or short animations?
+    - Which parts of the story can be complemented with those same resources.
+    - Which specific proof points do you want to display to back up your arguments?
+    - Which actions do you expect people to take after going through your page story?
