@@ -13,7 +13,7 @@ animal.noises = noises;
 console.log(animal);
 
 var keyCount = 0;
-for (key in animal) {
+for (var key in animal) {
   keyCount ++;
   if (key === 'username'){
     console.log(`Hi my name is ${animal[key]}`);
