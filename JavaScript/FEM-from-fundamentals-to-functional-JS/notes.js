@@ -109,4 +109,22 @@ for (var i = 0; i < farm.length; i++) {
   farm[i].speak()
 }
 console.log(farm);
+
+NESTING OBJECTS
+
+var box = {};
+
+box.innerbox = {};
+
+box.innerbox.full = true;
+
+box['innerbox']['height'] = 10;
+
+box[innerbox2].full = false;
+// make the above line work without changing it...
+var innerbox2 = 'otherBox'  // innerbox2 is a new object
+box.otherBox = {}
+box[innerbox2].full = false;
+
+
 */

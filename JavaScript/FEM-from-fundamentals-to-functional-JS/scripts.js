@@ -25,6 +25,13 @@ var AnimalTestUser = function(username) {
 
 var testAnimal = AnimalTestUser('Dr.GreenThumb', 'weed guy', 'fun to know');
 
+// set up relationships object
+var relationships = {};
+var friends = [];
+var matches = [];
+relationships.friends = friends;
+relationships.matches = matches;
+
 var AnimalCreator = function(username, species, tagline, noises) {
   return {
     username: username,
@@ -51,6 +58,11 @@ var giveMatches = function(farmWithFriends) {
   }
 }
 
+var addRelationshipsObject = function(farm) {
+  for(var i = 0; i < farm.length; i++) {
+    farm[i]['relationships'] = relationships;
+  }
+}
 // some animals for the farm
 
 var quackers = AnimalCreator('Daffy Duck', 'duck', 'Yippeee!', ['quack', 'honk', 'sneeze', 'growl'])
@@ -73,4 +85,7 @@ addFriend(natureBoy, slither);
 addFriend(animal, natureBoy);
 addMatchesArray(farm);
 giveMatches(farm);
+
+// Add object for relationships to farm
+addRelationshipsObject(farm);
 console.log(farm);
