@@ -89,3 +89,5 @@ giveMatches(farm);
 // Add object for relationships to farm
 addRelationshipsObject(farm);
 console.log(farm);
+relationships.friends = ["tim","tom"];
+relationships.matches = ["judy","jell"]

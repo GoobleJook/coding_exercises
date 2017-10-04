@@ -126,5 +126,52 @@ var innerbox2 = 'otherBox'  // innerbox2 is a new object
 box.otherBox = {}
 box[innerbox2].full = false;
 
+SCOPE
+Scope describes where a variable is accessible, inside the function or in the global.
+var x = 'global';
+function demonstration() {
+  y = 'global';
+  var z = 'local';
+  window.y = 'also global due to some JS magic in the browser window!'
+}
 
+var g = 'global';
+
+function blender(fruit) {
+  var b = fruit;
+  var y = 'yogurt';
+
+  function bs() {
+    alert (b + ' and ' + y + ' makes ' + b + ' swirl')
+  } 
+  bs();
+}
+
+blender('blueberry'); // parent can reach into child, but child can't reach into parent -- "Don't reach into the blender!"
+
+pro-tip: store private variables inside functions.
+
+var g = 'global';
+
+function go() {
+  var l = 'local';
+  var g = 'in here!'
+  alert(g + ' inside go'); // in! here inside go
+}
+
+go();
+alert(g + ' outside go'); // global outside go
+
+// the most local variable has precedence
+
+var inBlock = false;
+
+for(var i = 0; i < 5; i++){
+  var inBlock = true;
+};
+
+if(inBlock){
+  console.log('is there block scope? ' + !inblock) // false 
+  // scope only exists in functions
+}
 */
