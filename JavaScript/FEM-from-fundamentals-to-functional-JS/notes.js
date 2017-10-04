@@ -49,5 +49,9 @@ for(var key in box) {
 
 Objects have no return order on properties
 
+ARRAYS
+
+Arrays are objects and follow the same rules as above. They are commonly used for 
+ordered lists, though, as they have an ordered index (or, for some reason, an object property index)
 
 */
