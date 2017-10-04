@@ -1,26 +1,14 @@
 //Use this file to implement Part One of your project
 
-var noiseArray = ['meow', 'woof', 'neigh'];
-
-noiseArray.unshift('quack'); // add to the front of the array
-noiseArray.push('honk'); // add to the end of the array
-noiseArray[5] = 'gaamp'
-
-var animal = {};
-animal.username = 'Harry';
-animal['tagline'] = 'I\'m Harry!';
-
-animal.noises = noiseArray;
-
-var keyCount = 0;
-for (var key in animal) {
-  keyCount ++;
-  if (key === 'username'){
-    console.log(`Hi my name is ${animal[key]}`);
-  } else if (key === 'tagline') {
-    console.log(`I like to say ${animal[key]}`);
-  }
-}
+// var keyCount = 0;
+// for (var key in animal) {
+//   keyCount ++;
+//   if (key === 'username'){
+//     console.log(`Hi my name is ${animal[key]}`);
+//   } else if (key === 'tagline') {
+//     console.log(`I like to say ${animal[key]}`);
+//   }
+// }
 
 var farm = [];
 
@@ -35,24 +23,40 @@ var AnimalTestUser = function(username) {
   }
 };
 
+var testAnimal = AnimalTestUser('Dr.GreenThumb', 'weed guy', 'fun to know');
+
+var AnimalCreator = function(username, species, tagline, noises) {
+  return {
+    username: username,
+    species: species,
+    tagline: tagline,
+    noises: noises,
+    friends: []
+  }
+};
+
+var addFriend = function(animal, friend) {
+  animal['friends'].push(friend['username']);
+};
+
+var addMatchesArray = function(farm) {
+  for(var i = 0; i < farm.length; i++) {
+    farm[i]['matches'] = [];
+  }
+};
+
+var giveMatches = function(farmWithFriends) {
+  for(var i = 0; i < farmWithFriends.length; i++) {
+    farm[i]['matches'] = farm[i]['friends'][0];
+  }
+}
+
 // some animals for the farm
-var quackers = { 
-  username: 'Daffy Duck',
-  tagline: 'Yippeee!',
-  noises: ['quack', 'honk', 'sneeze', 'growl']
-};
 
-var slither = {
-  username: 'Akasha',
-  tagline: 'I\'m a snake!',
-  noises: ['hiss', 'other snake stuff']
-};
-
-var natureBoy = {
-  username: 'probably Dave',
-  tagline: 'I like woods and shit',
-  noises: ['dirty hippy shit', 'take a shower']
-};
+var quackers = AnimalCreator('Daffy Duck', 'duck', 'Yippeee!', ['quack', 'honk', 'sneeze', 'growl'])
+var slither = AnimalCreator('Akasha', 'snake', 'I\'m a snake', ['hiss', 'other snake stuff']);
+var natureBoy = AnimalCreator('probably Dave', 'hippie', 'I like woods and shit', ['take a shower, hippie', 'got any weed?']);
+var animal = AnimalCreator('Harry', 'cat', 'I\'m Harry!', ['meow', 'caw', 'hiss']);
 
 // put some animals on the farm
 farm[0] = animal;
@@ -60,5 +64,13 @@ farm.push(quackers);
 farm[farm.length] = slither;
 farm.push(natureBoy);
 
-var testAnimal = AnimalTestUser('Dr.GreenThumb', 'weed guy', 'fun to know');
-console.log(testAnimal);
+
+
+// Give them some friends
+addFriend(quackers, slither);
+addFriend(slither, animal);
+addFriend(natureBoy, slither);
+addFriend(animal, natureBoy);
+addMatchesArray(farm);
+giveMatches(farm);
+console.log(farm);
