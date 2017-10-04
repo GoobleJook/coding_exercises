@@ -11,7 +11,6 @@ animal.username = 'Harry';
 animal['tagline'] = 'I\'m Harry!';
 
 animal.noises = noiseArray;
-console.log(animal);
 
 var keyCount = 0;
 for (var key in animal) {
@@ -23,9 +22,20 @@ for (var key in animal) {
   }
 }
 
-console.log(`There are ${keyCount} keys in the animal object!`);
+var farm = [];
 
-var animals = [];
+var AnimalTestUser = function(username) {
+  var otherArgs = [];
+  if (arguments.length > 1) {
+    for(var i = 1; i < arguments.length; i++) {
+      otherArgs.push(arguments[i])
+    } return {username: username, otherArgs: otherArgs}
+  } else {
+    return { username: username };  
+  }
+};
+
+// some animals for the farm
 var quackers = { 
   username: 'Daffy Duck',
   tagline: 'Yippeee!',
@@ -44,9 +54,11 @@ var natureBoy = {
   noises: ['dirty hippy shit', 'take a shower']
 };
 
-animals[0] = animal;
-animals.push(quackers);
-animals[animals.length] = slither;
-animals.push(natureBoy);
-console.log(animals.length);
+// put some animals on the farm
+farm[0] = animal;
+farm.push(quackers);
+farm[farm.length] = slither;
+farm.push(natureBoy);
 
+var testAnimal = AnimalTestUser('Dr.GreenThumb', 'weed guy', 'fun to know');
+console.log(testAnimal);
