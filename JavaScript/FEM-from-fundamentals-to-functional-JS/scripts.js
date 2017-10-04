@@ -46,7 +46,7 @@ var natureBoy = {
 
 animals[0] = animal;
 animals.push(quackers);
-animals.push(slither);
+animals[animals.length] = slither;
 animals.push(natureBoy);
 console.log(animals.length);
 
