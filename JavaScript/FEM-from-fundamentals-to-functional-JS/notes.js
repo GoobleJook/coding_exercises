@@ -54,4 +54,54 @@ ARRAYS
 Arrays are objects and follow the same rules as above. They are commonly used for 
 ordered lists, though, as they have an ordered index (or, for some reason, an object property index)
 
+FUNCTIONS
+Bianca recommends defining functions as variables in JS due to hoisting.
+
+var nameImprover = function (name, adj) {
+  return 'Col ' + name + ' Mc' + adj + ' pants';
+};
+
+$('body').hide();
+
+myArr.forEach(function(val){ console.log(val); });
+
+$('button').on('click', function() {
+  console.log('Don\'t press my buttons!');
+});
+
+Functions code inside the block isn't run intil it is called with ().
+Parameters give arguments to functions. They are different things.
+
+Can use arguments keyword to specify unknown amount of arguments; eg 
+var add = function(a, b) {
+  console.log(arguments); // logs [3, 10, 5]
+  return a + b;
+};
+add(3, 10, 5);
+Can use arguments.length in conditional blocks, for example.
+Arguments is not an array and doesn't have array methods, but it is an array-like object and can be accessed in similar fashions.
+
+CONSTRUCTORS
+function AnimalMaker(name) {
+  return {
+    speak: function() {
+      console.log("My name is ", name); 
+    },
+    name: name,
+    owner: 'Robert'
+  };
+};
+
+
+
+// Loop through these and create an animal object for each
+var animalNames = ['Sheep', 'Liger', 'Big Bird'];
+var farm = [];
+
+for(var i = 0; i < animalNames.length; i++) {
+  var animal = AnimalMaker(animalNames[i]);
+  farm.push(animal);
+}
+
+console.log(farm);
 */
