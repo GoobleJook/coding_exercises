@@ -15,4 +15,20 @@ var lastNameTrier = function(firstName) {
   return lastNameGetter;
 };
 
-;
+var storyWriter = function() {
+  var story = '';
+  return {
+    addWords: function(word) {
+      story += ' ' + word;
+      return story.trim();
+    },
+    erase: function() {
+      story = '';
+    }
+  };
+};
+
+story = myStory.addWords('This is my story. I think it is a very good story.');
+// "This is my story. I think it is a very good story."
+story
+// "This is my story. I think it is a very good story."

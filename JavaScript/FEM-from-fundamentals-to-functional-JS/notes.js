@@ -298,4 +298,148 @@ var nonsense = function(string){
 
 nonsense('blah blah blah')
 
+MODULE PATTERN (for class-like structures and APIs)
+
+var Module = function() {
+  var privateProperty = 'foo';
+
+  function privateMethod(args) {
+    // do something
+  };
+
+  return {
+    publicProperty: "",
+    publicMethod: function(args) {
+      // do something
+    },
+    privilegeMethod: function(args) {
+      privateMethod(args);
+    }
+  };
+};
+
+var Car = function() {
+  
+  var gasolineLevel = 10;
+
+  function useGas(amt) {
+    if(gasolineLevel - amt < 0) {
+      console.log("out of gas :[");
+    } else {
+      gasolineLevel -= amt;
+    }
+  };
+
+  return {
+    radioStation: "104.5",
+
+    changeStation: function(station) {
+      this.radioStation = station;
+    },
+    go: function(speed) { useGas(speed); }
+  };
+};
+
+var Mustang = Car();
+Mustang.go(20); // out of gas :[
+
+HIGHER-ORDER FUNCTIONS
+They 1. take a function as an argument or 
+
+element.addEventListener("click", function() {
+  
+  console.log("element clicked!");
+});
+
+2. return a function as an output.
+
+var add = function(num){
+  var num1 = num;
+
+  return addToNum1 = function(num2){
+    return num1 + num2;
+  };
+};
+
+if/else statement abstracted into a function
+
+var ifElse = function(condition, isTrue, isFalse){
+  
+  if(condition){
+    isTrue;
+  } else {
+    isFalse;
+  }
+};
+
+ifElse(true,
+  function() { console.log(true); },
+  function() { console.log(false); }
+); // returns undefined because it's not returning a called function.
+
+
+var ifElse = function(condition, isTrue, isFalse){
+  if(condition){
+    return isTrue();
+  } else {
+    return isFalse();
+  }
+};
+
+ifElse(true, 
+  function() { console.log(true); },
+  function() { console.log(false); }
+);
+
+Or...
+
+var ifElse = function(condition, isTrue, isFalse){
+  if(condition){
+    isTrue();
+  } else {
+    isFalse();
+  }
+};
+
+var logTrue = function(){ console.log(true); };
+var logFalse = function(){ console.log(false); };
+
+ifElse(true, logTrue, logFalse);
+
+PASSING ARGUMENTS
+
+var increment = function(n){ return n + 1; };
+
+var square = function(n){ return n * n; };
+
+var doMathSoIDontHaveTo = function(n, func){
+  return func(n);
+};
+
+doMathSoIDontHaveTo(5, square);
+
+doMathSoIDontHaveTo(4, increment);
+
+PASS A FUNCTION TO THIS IN EITHER ISTRUE OR ISFALSE
+
+var ifElse = function(condition, isTrue, isFalse){
+  if(condition){
+    isTrue();
+  } else {
+    isFalse();
+  }
+};
+
+Add an arg!!!
+var ifElse = function(condition, isTrue, isFalse, arg){
+  if(condition){
+    isTrue(arg);
+  } else {
+    isFalse(arg);
+  }
+};
+
+ifElse(true, function(x){console.log(x)}, function(x){console.log(x)}, 'asdf');
+// asdf
+
 */
