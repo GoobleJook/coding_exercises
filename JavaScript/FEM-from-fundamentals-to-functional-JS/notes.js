@@ -174,4 +174,128 @@ if(inBlock){
   console.log('is there block scope? ' + !inblock) // false 
   // scope only exists in functions
 }
+
+CLOSURE
+
+var closureAlert = function() {
+  var x = "Help! I'm stuck inside a closure!";
+
+  var alerter = function() {
+    alert(x);
+  }
+
+  setTimeout(alerter, 1000); // will run alerter 1 second after it is called
+
+  console.log("Will still run right after");
+};
+
+var closureAlerter = function() {
+  var x = 0;
+  var alerter = function() {
+    alert(++x) // increments then returns vs. x++ returning then incrementing
+    };
+    return alerter; // you want it to be the function, which can be run on call, rather than the return of the function, which can't be called -- so don't use ();
+};
+
+var funcStorer = closureAlerter(); // this is a closure
+var funcStorer2 = closureAlerter(); 
+funcstorer(); // alerts 1
+funcstorer(); // alerts 2 -- it keeps the scope of the function it references
+funcstorer2(); // alerts 1 -- it creates a new scope
+
+Closures can create privacy
+
+Examples of closure use:
+var add = function(num){
+  var num1 = num;
+
+  var addToNum1 = function(num2) {
+    return num 1 + num2;
+  };
+
+  return addToNum1;
+};
+
+var add5 = add(5);
+add5(2); // 7
+
+function counter() {
+  var n = 0;
+  return {
+    count: function() { return ++n; },
+    reset: function() { n = 0; }
+  };
+};
+
+var myCounter = counter();
+myCounter.count(); // 1
+myCounter.count(); // 2
+myCounter.reset(); // undefined
+myCounter.count(); // 1
+
+CLOSURE RECIPE:
+1. Create your parent function
+2. Define some variables in the parent's local scope
+3. Define a function inside the parent function. We call this a child.
+4. Return that function without calling it from inside the parent function.
+
+CLOSURE EXECUTION:
+1. Run parent function and save to a variable. This variable will hold whatever the function returns.
+2. Optional: Check what that variable holds in its value (it should be the inner function).
+3. Run the inner function.
+
+Gotcha!
+
+var sayAlice = function() {
+  
+  var makeLog = function() {
+    console.log(alice);
+  }
+
+  var alice = "Why hello there, alice!";
+
+  return makeLog;
+}
+
+
+var aliceGreeting = sayAlice();
+aliceGreeting(); //"Why hello there, Alice!";
+
+***
+
+var makeStopwatch = function() {
+  console.log('initialized');
+  var elapsed = 0;
+  console.log(elapsed);
+
+  var stopwatch = function() {
+    console.log('stopwatch');
+    return elapsed;
+  };
+
+  var increase = function() { elapsed++; };
+  setInterval(increase, 1000);
+
+  return stopwatch;
+};
+
+var x = makeStopwatch();
+
+Write a function, nonsense, that takes an input string.. This function contains
+another function, blab, which alerts string and is immediately called inside
+the function nonsense. Bnab should look like this inside of the nonsense function:
+
+var blab = function() {
+  alert(string);
+}
+
+var nonsense = function(string){
+  var blab = function() {
+    alert(string);
+  };
+  blab();
+};
+
+nonsense('blah blah blah')
+
 */
