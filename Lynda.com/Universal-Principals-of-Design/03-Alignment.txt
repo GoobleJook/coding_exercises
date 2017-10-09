@@ -1,0 +1,7 @@
+"Getting Your Ducks in a Row"
+
+- Things that are aligned seem to be more related than things that are not.
+- Things that are aligned lead the eye, which then influences the sequence in which people process the information.
+  - Western readers tend to read top->down and left->right, so elements that align in this reading pattern strongly influence perception and behavior
+- Every element in a design should align with at least one other element. No element in a design should be dangling out there on its own. 
+    - One exception to this rule would be when the designer is trying to create a sense of disorder or chaos, which may make a case for lack of alignment, to draw attention to the unaligned element.

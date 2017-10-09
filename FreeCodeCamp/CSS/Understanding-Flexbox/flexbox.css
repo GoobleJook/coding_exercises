@@ -1,0 +1,46 @@
+/*Creating a flexbox*/
+/*Make parent element a flex container */
+
+ul {
+  height: 300px;
+  border: 1px solid red;
+  padding: 0;
+  list-style: none;
+  background-color: #e8e8e9;
+  display: flex; /*or inline-flex*/
+  /*flex-direction: row;*/ /*By default flex-direction is row, like floats, not column, like blocks*/
+  /*flex-wrap: wrap;*/ /*By default: no-wrap;*/
+  flex-flow: row no-wrap;
+  justify-content: flex-start;
+  align-items: flex-end;
+  align-content: center;
+}  
+
+/*Main axis: left to right
+Cross axis: top to bottom
+*/
+li {
+  background-color: #8cacea;
+  flex-basis:150px;
+  height: 100px; 
+  margin: 8px;
+  padding: 4px; /*Can be 0-any positive number*/
+  /*Can be 0-any positive number*/
+} /*Automatically become the flex items after starting flex on the flex container*/
+
+li:nth-child(1) {
+  order: 2; /*order is not objective, it describes HIGHER ranked items (priority), not position*/
+}
+
+li:nth-child(2){
+  order:1;
+  flex-shrink:0;
+}
+
+li.absflex {
+  flex:1 1 auto;
+}
+
+li.relflex {
+  flex-basis: 200px;
+}

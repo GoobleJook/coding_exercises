@@ -1,0 +1,16 @@
+"The Feature That Breaks the Project's Back"
+
+FEATURE CREEP: A continuous expansion or addition of new product features beyond the original scope.
+  - One of the most common causes of cost and schedule overruns
+  - Features are easy or convenient to add (software dev)
+  - Features accumulate over multiple generations of a product (MS Word toolbars fully expanded)
+  - Features are added to appease internal project stakeholders
+  - At its core, this is all due to the key driver, the belief that MORE IS BETTER; features are continuously added and rarely taken away.
+    - BUT THIS IS WRONG BECAUSE
+      adding features -> adds complexity -> adds cost
+
+  HOW TO AVOID FEATURE CREEP:
+  1. Be on the lookout for feature creep in design and development, and educate your peers about the trap. Feature creep is often the result of feature additions and changes that come in little bits and pieces. WATCH OUT FOR THEM.
+  2. Ensure features are linked to customer needs and are not added out of convenience or appeasement.
+  3. When doing updated versions of a design, ask not just what can be ADDED, but what can be SUBTRACTED.
+  4. Create a product milestone to formally freeze the product specification...freeze means no more changes.

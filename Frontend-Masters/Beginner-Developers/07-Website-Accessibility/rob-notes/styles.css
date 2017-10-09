@@ -1,0 +1,13 @@
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: red;
+  color: white;
+  padding: 8px;
+  z-index: 9999;
+} /*Put it invisible*/
+
+.skip-link:focus {
+  top: 0;
+}

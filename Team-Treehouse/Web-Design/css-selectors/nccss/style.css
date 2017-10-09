@@ -1,0 +1,21 @@
+/* Structural Pseudo-classes------------------ */
+
+
+/*div:nth-child(4) {
+  background: #52bab3;
+  color: white;
+}
+*/
+/*:nth-child is fragile because if something of a different element (like <h1>) is put before it, it will be ignored;*/
+
+/*:nth-of-type() is better;*/
+
+div:nth-of-type(4) {
+  background: #52bab3;
+  color: white;
+}
+
+div:nth-last-of-type(2) {
+  background: #52bab3;
+  color: white; 
+}

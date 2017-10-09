@@ -1,0 +1,16 @@
+"Exploring the road most traveled
+
+Designer-centered design:
+All too often, designers don't know best (ex: human-made walking paths next to poorly designed sidewalks that made assumptions about where people wanted to walk)
+
+User-centered design:
+Develop a deep understanding how people will interact or use a thing, and then let that understanding inform and guide the design. For example, putting the lawn in without sidewalks and then deciding where to lay the sidewalks based on where the trails left by the pedestrians are.
+
+Desire lines:
+Traces of use or wear that indicate preferred methods of interaction; They are noninvasive, unbiased, and statistical measures of how people actually use things.
+  - Can be physical, or on the web can be discovered using heatmaps or cookie trails
+  - Possibly the most reliable indication of interaction and use
+    - self-reported responses are notoriously inaccurate
+    - Observing behaviors frequently alters them, if the subject knows he is being watched or videoed.
+
+"Always explore the road most traveled...there is much to be learned there."

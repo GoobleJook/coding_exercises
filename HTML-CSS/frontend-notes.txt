@@ -1,0 +1,1 @@
+<!-- Setting canvas size in attributes sets both the size of the element and the size of the element's drawing surface, whereas setting in CSS only changes the element's size but not the drawing size. -->

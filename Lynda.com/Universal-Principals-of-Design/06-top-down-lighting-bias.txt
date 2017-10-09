@@ -1,0 +1,15 @@
+"Putting your Design in the Best Possible Light"
+
+EXAMPLE -- Lincoln Memorial:
+- original lighting (from bottom) cast Lincoln's face in a ghostly fashion.
+- French put in electric lights in the 1920's, which gave lighting he was seeking, and then he sent photos to the commission responsible for the memorial.
+  - Lighting from the top-left gave the impression of "lowered, thoughtful brows"
+
+DEFINITION: Top-down lighting bias:
+Top-down lighting bias is the tendency to interpret objects as being lit from a single light source from above. It is found across all ranges and cultures. This likely results from humans evolving in an environment lit from above by the sun.
+
+As a result of the bias, dark or shaded areas are interpreted as being farthest from the light source, and light areas are interpreted as closest.
+
+Objects that are lighter at the top and darker at the bottom are interpreted to be convex.
+
+

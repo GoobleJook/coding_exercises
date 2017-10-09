@@ -1,0 +1,62 @@
+<!-- INTERPRETED FROM DANIEL BOROWSKI AT:
+https://medium.freecodecamp.com/3-questions-to-watch-out-for-in-a-javascript-interview-725012834ccb#.sz1db8j28
+
+ When building an application, sometimes you’ll need to attach event 
+ listeners to buttons, text, or images on the page in order to perform some
+ action when the user interacts with the element. If we take a simple todo
+ list as an example, the interviewer may tell you that they want an action 
+ to occur when a user clicks one of the list items. And they want you to 
+ implement this functionality in JavaScript assuming the following HTML 
+ code: -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <title>Document</title>
+ </head>
+ <body>
+ <ul id="todo-app">
+   <li class="item">Walk the dog</li>
+   <li class="item">Pay bills</li>
+   <li class="item">Make dinner</li>
+   <li class="item">Code for one hour</li>
+ </ul>
+ <script>
+   document.addEventListener('DOMContentLoaded', function() {
+
+    let app = document.getElementById('todo-app');
+
+    // attach event listener to the whole container
+    app.addEventListener('click', function(e) {
+      if (e.target && e.target.nodeName === "LI") {
+        let item = e.target;
+        alert('you clicked on item: ' + item.innerHTML);
+      }
+    });
+   });
+ </script>
+
+
+ </body>
+ </html>
+
+
+<!-- <script>
+  document.addEventListener('DOMContentLoaded', function() {
+
+  let app = document.getElementById('todo-app')
+  let items = app.getElementsByClassName('item');
+
+  // attach event listener to each item
+  for (let item of items) {
+    item.addEventListener('click', function() {
+      alert('you clicked on item: ' + item.innerHTML);
+    });
+  }
+});
+</script> 
+ --><!-- The problem with the above is it attaches a listener to each item, which can get cumbersome after 10 items. It is not an efficient solution.
+
+Big O - n? -->
+
+<!-- Event delegation is a more efficient approach; it attaches ONE event listener to the entire container, which allows it to access each item when it's clicked. Event delegation is scripted into  Big O - 1?-->
