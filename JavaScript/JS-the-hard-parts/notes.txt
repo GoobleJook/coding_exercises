@@ -1,0 +1,27 @@
+Codecademy
+Wes bos -- JavaScript 30
+Build chrome extensions that you want to you (YouTube pull video from DOM)
+JS The weird parts -- Udemy
+CodePen
+CodeWars
+PythonTutor
+CodeByte
+CodeSmith.io
+Pluralsight
+WebRTC (for peer to peer)
+ReactTide (IDE for react on github)
+Machine Learning
+
+Focus:
+Problem solving with code
+Technical communication
+...
+... (support each other?)
+Programming experience
+
+
+Fundametnal principles:
+- What happens when JS executes my code?
+  - reads line by line in memory
+  
+- 
