@@ -2,8 +2,10 @@ ul {
   display: flex;
   list-style: none;
   border: 1px solid red;
-  padding: 0;
+  padding: 20px;
+  min-height: 50%;
   background-color: #e8e8e9;
+  flex-flow: row wrap;
 }
 
 li {
@@ -13,4 +15,12 @@ li {
   min-height: 100px;  
   background-color: #8cacea;
   margin: 8px;
+}
+
+li:nth-child(1) {
+  order: 1; /*weight in order starts at 0, raising the 1st item to the higest order, it gets put last*/
+}
+
+li:nth-child(2) {
+  order: 2;
 }
