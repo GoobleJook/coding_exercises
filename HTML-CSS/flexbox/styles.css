@@ -1,0 +1,20 @@
+ul {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap-reverse;
+  flex-flow: row wrap; /*this is shorthand, will overwrite default row and declared wrap-reverse above*/ 
+  justify-content: space-around; /*flex-start || flex-end || center || space-between || space-around -- applies to main axis*/
+  align-items: baseline; /*flex-start || flex-end || center || stretch || baseline -- this is used for the cross-axis*/
+  /*align-content: flex-end;*/ /*same as above but for cross-axis, takes all values but baseline*/
+}
+
+li {  
+  width: 100px;  
+  background-color: #8cacea;
+  margin: 8px;
+}
+
+/*apply to all list items except the first*/
+li:not(:first-child) {
+  font-size: 2rem;
+}
