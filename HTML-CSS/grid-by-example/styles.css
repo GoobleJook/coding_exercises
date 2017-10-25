@@ -1,0 +1,22 @@
+* {box-sizing: border-box;}
+
+.grid {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+}
+
+.grid div {
+  border: 1px solid rgb(0,95,107);
+  border-radius: 3px;
+  background-color: rgba(0,95,107,0.8);
+  padding: 0.2em;
+  color: #fff;
+}
+
+.grid div:nth-child(odd){
+  border: 1px solid rgb(0,95,107);
+  border-radius: 3px;
+  background-color: rgba(0,95,107,1.5);
+  padding: 0.2em;
+  color: #fff;
+}
