@@ -1,32 +1,25 @@
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
-.grid {
+.wrapper {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* The first two values will be responsive */
-  /*grid-template-rows: 200px 100px; There will be two left over
-  /*grid-auto-rows: 100px;  Sets size of any rows outside the first two*/
-  grid-column-gap: 20px; /*adds gutter*/
-  grid-row-gap: 20px; /*adds gutter*/
-  /*grip-gap: 20px; adds gutter to colums and rows*/
-  grid-auto-columns: minmax(100px, auto);
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 100px;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
-.grid div:nth-child(2){
-  order: 1;
+.box {
+  background-color: #fff4a2;
+  border-radius: 5px;
+  border: 1px solid orange;
 }
 
-.grid div {
-  border: 1px solid rgb(0,95,107);
-  border-radius: 3px;
-  background-color: rgba(0,95,107,0.8);
-  padding: 0.2em;
-  color: #fff;
-}
-
-.grid div:nth-child(odd){
-  border: 1px solid rgb(0,95,107);
-  border-radius: 3px;
-  background-color: rgba(0,95,107,1.5);
-  padding: 0.2em;
-  color: #fff;
+.box1 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 5;
 }
