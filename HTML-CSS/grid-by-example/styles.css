@@ -20,6 +20,11 @@
 .box1 {
   grid-column-start: 1;
   grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.box2 {
   grid-row-start: 3;
   grid-row-end: 5;
 }
