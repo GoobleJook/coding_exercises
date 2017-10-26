@@ -2,12 +2,14 @@
 
 .grid {
   display: grid;
-  grid-template-columns: 100px repeat(2, 1fr 2fr); /* The first two values will be responsive */
+  grid-template-columns: repeat(3, 1fr); /* The first two values will be responsive */
   /*grid-template-rows: 200px 100px; There will be two left over*/
   /*grid-auto-rows: 100px;  Sets size of any rows outside the first two*/
+  grid-template-rows: repeat(3, 1fr);
   grid-column-gap: 20px; /*adds gutter*/
   grid-row-gap: 20px; /*adds gutter*/
   /*grip-gap: 20px; adds gutter to colums and rows*/
+  grid-auto-flow: column;
 }
 
 .grid div {
