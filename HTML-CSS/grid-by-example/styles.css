@@ -2,7 +2,12 @@
 
 .grid {
   display: grid;
-  grid-template-columns: 200px 200px 200px;
+  grid-template-columns: 2fr 1fr 200px; /* The first two values will be responsive */
+  /*grid-template-rows: 200px 100px; There will be two left over*/
+  /*grid-auto-rows: 100px;  Sets size of any rows outside the first two*/
+  grid-column-gap: 20px; /*adds gutter*/
+  grid-row-gap: 20px; /*adds gutter*/
+  /*grip-gap: 20px; adds gutter to colums and rows*/
 }
 
 .grid div {
@@ -11,6 +16,7 @@
   background-color: rgba(0,95,107,0.8);
   padding: 0.2em;
   color: #fff;
+
 }
 
 .grid div:nth-child(odd){
