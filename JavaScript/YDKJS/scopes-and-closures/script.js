@@ -20,4 +20,4 @@ var a = 2;
 
 console.log(a); //2
 
-// in this function expression foo only exists in its own scope and the function executes
+// in this function expression foo only exists in its own scope and the function executes immediately
