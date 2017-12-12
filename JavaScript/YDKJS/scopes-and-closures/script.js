@@ -64,19 +64,20 @@
 
 // example of a function that should be "hidden"
 
-function doSomething(a) {
-  b = a + doSomethingElse(a * 2);
 
-  console.log(b * 3);
-}
+// function doSomething(a) {
+//   b = a + doSomethingElse(a * 2);
 
-function doSomethingElse(a) {
-  return a - 1;
-}
+//   console.log(b * 3);
+// }
 
-var b;
+// function doSomethingElse(a) {
+//   return a - 1;
+// }
 
-doSomething(2); // 15
+// var b;
+
+// doSomething(2); // 15
 
 // A more "proper" design that uses "hiding"
 
@@ -87,7 +88,9 @@ function doSomething(a) {
 
   var b;
 
-  b = a + doSomethingElse(b * 3);
+  b = a + doSomethingElse(a * 2);
+
+  console.log(b * 3);
 }
 
 doSomething(2); // 15
