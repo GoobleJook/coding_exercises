@@ -15,6 +15,7 @@
   background-color: #fff4a2;
   border-radius: 5px;
   border: 1px solid orange;
+  grid-template-rows: repeat(3,2fr); 
 }
 
 .box1 {
@@ -22,9 +23,17 @@
   grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 3;
+
 }
 
 .box2 {
   grid-row-start: 3;
   grid-row-end: 5;
+}
+
+.nested {
+  background-color: yellow;
+  border-radius: 5px;
+  grid-gap: 10px;
+  border: 1px solid green;
 }
