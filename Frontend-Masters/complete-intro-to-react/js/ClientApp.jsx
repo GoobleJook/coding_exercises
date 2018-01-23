@@ -10,8 +10,24 @@ const MyFirstComponent = function() {
     { id: 'my-first-component' },
     ce(MyTitle, { title: 'Game of Thrones', color: 'YellowGreen' }),
     ce(MyTitle, { title: 'Stranger Things', color: 'GreenYellow' }),
-    ce(MyTitle, { title: 'Rick and Morty', color: 'LimeGreen' }),
+    ce(MyTitle, {
+      title: 'Rick and Morty',
+      color: 'LimeGreen'
+    }),
     ce(MyTitle, { title: 'Women are Stupid', color: 'peru' })
+  );
+};
+
+ReactDOM.render(ce(MyFirstComponent), document.getElementById('app'));
+
+const MyFirstComponent = function() {
+  return ce(
+    'div',
+    { id: 'my-first-component' },
+    ce(MyTitle, { title: 'Game of Thrones', color: 'YellowGreen' }),
+    ce(MyTitle, { title: 'Stranger Things', color: 'GreenYellow' }),
+    ce(MyTitle, { title: 'Rick and Morty', color: 'LimeGreen' }),
+    ce(MyTitle, { title: 'Silicon Valley', color: 'peru' })
   );
 };
 
